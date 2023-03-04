@@ -25,16 +25,16 @@ LIBRARY IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 
-entity adder4_aux is
+entity adder4 is
 	port( a, b		: in	STD_LOGIC_VECTOR(3 downto 0);
 			cin      : in STD_LOGIC;
 	      ans		: out	STD_LOGIC_VECTOR(3 downto 0);
---	      cout		: out	STD_LOGIC);
-end adder4_aux;
+	      cout		: out	STD_LOGIC);
+end adder4;
 
 
 
-architecture STRUCTURE of adder4_aux is
+architecture STRUCTURE of adder4 is
 
 
 component BIT_ADDER_1
