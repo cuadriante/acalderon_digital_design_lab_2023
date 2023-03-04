@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/simulation/modelsim
+Eadder4
+Z1 w1677824087
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd
+Z5 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd
+l0
+L68
+Vf8cUG?CUZJ6SejV61P2n50
+!s100 =UQJ4KI]MR;<=eEW29a0b0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1677824827
+!i10b 1
+Z8 !s108 1677824827.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd|
+Z10 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abhv
+R2
+R3
+DEx4 work 6 adder4 0 22 f8cUG?CUZJ6SejV61P2n50
+l88
+L78
+VDAFkVQEaWd:m@GHn`VgFX3
+!s100 VVH;cBola1zdEjeF?]?H;1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eadder4_aux
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L32
+VR;MTI;:<ch_HlS:GX4hJZ1
+!s100 3a4b[S:h]0SQeVO9EQ]NC3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 10 adder4_aux 0 22 R;MTI;:<ch_HlS:GX4hJZ1
+l53
+L41
+VOPjJ[C18g;lAoTg554c>a3
+!s100 M2O7S45T:O_2Uo^WP`IY[3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebit_adder_1
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L8
+VfOkQlNYaa=J[5lmo9i<g62
+!s100 7S`nCK0`kYm89kgHE2o>03
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abhv
+R2
+R3
+DEx4 work 11 bit_adder_1 0 22 fOkQlNYaa=J[5lmo9i<g62
+l14
+L13
+VTORG[Hee0eFhR74=JO=:f3
+!s100 ZB2fZcA0f?=B9UGF[bEiY0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etest_add4
+Z13 w1677824783
+R2
+R3
+R0
+Z14 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd
+Z15 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd
+l0
+L17
+VM<dRbzIYJ<i3V=U74a@2i3
+!s100 LkmcgXze@771DzbeTYH5T1
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd|
+Z17 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 9 test_add4 0 22 M<dRbzIYJ<i3V=U74a@2i3
+l38
+L22
+VXPoJ6jXV::_3I@6J7PY0V1
+!s100 OPM_1XM]BJSd[d<iV81iM1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
