@@ -2,7 +2,9 @@ module problema1_tb();
 		logic I0, I1, I2, I3,
 				S0, S1, S2, S3, S4;
 				
-		decodificador deco(I0, I1, I2, I3, S0, S1, S2, S3, S4);
+		decodificador deco(I0, I1, I2, I3, S0, S1, S2, S3, S4,
+				  HEX_0_0, HEX_0_1, HEX_0_2, HEX_0_3, HEX_0_4, HEX_0_5, HEX_0_6,
+				  HEX_1_0, HEX_1_1, HEX_1_2, HEX_1_3, HEX_1_4, HEX_1_5, HEX_1_6);
 			
 		initial begin 
 		
