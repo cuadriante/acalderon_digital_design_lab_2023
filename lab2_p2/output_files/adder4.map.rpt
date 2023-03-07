@@ -1,5 +1,5 @@
 Analysis & Elaboration report for adder4
-Mon Mar  6 21:34:16 2023
+Mon Mar  6 23:30:50 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Mar  6 21:34:16 2023          ;
+; Analysis & Elaboration Status ; Successful - Mon Mar  6 23:30:50 2023          ;
 ; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; adder4                                         ;
 ; Top-level Entity Name         ; adder4                                         ;
@@ -57,8 +57,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -161,27 +161,27 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Mar  6 21:34:08 2023
+    Info: Processing started: Mon Mar  6 23:30:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adder4 -c adder4 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 6 design units, including 3 entities, in source file adder4.vhd
-    Info (12022): Found design unit 1: BIT_ADDER_1-BHV File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 12
-    Info (12022): Found design unit 2: adder4_aux-STRUCTURE File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 43
-    Info (12022): Found design unit 3: adder4-BHV File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 81
-    Info (12023): Found entity 1: BIT_ADDER_1 File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 7
-    Info (12023): Found entity 2: adder4_aux File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 34
-    Info (12023): Found entity 3: adder4 File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 71
+    Info (12022): Found design unit 1: BIT_ADDER_1-BHV File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 12
+    Info (12022): Found design unit 2: adder4_aux-STRUCTURE File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 43
+    Info (12022): Found design unit 3: adder4-BHV File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 81
+    Info (12023): Found entity 1: BIT_ADDER_1 File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 7
+    Info (12023): Found entity 2: adder4_aux File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 34
+    Info (12023): Found entity 3: adder4 File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 71
 Info (12021): Found 2 design units, including 1 entities, in source file adder4_tst.vhd
-    Info (12022): Found design unit 1: TEST_ADD4-behavior File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd Line: 12
-    Info (12023): Found entity 1: TEST_ADD4 File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd Line: 7
+    Info (12022): Found design unit 1: TEST_ADD4-behavior File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd Line: 12
+    Info (12023): Found entity 1: TEST_ADD4 File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd Line: 7
 Info (12127): Elaborating entity "adder4" for the top level hierarchy
-Info (12128): Elaborating entity "adder4_aux" for hierarchy "adder4_aux:adder4_1" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 94
-Info (12128): Elaborating entity "BIT_ADDER_1" for hierarchy "adder4_aux:adder4_1|BIT_ADDER_1:b_adder0" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 57
+Info (12128): Elaborating entity "adder4_aux" for hierarchy "adder4_aux:adder4_1" File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 94
+Info (12128): Elaborating entity "BIT_ADDER_1" for hierarchy "adder4_aux:adder4_1|BIT_ADDER_1:b_adder0" File: /home/nasser/Documents/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd Line: 57
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Mon Mar  6 21:34:16 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 803 megabytes
+    Info: Processing ended: Mon Mar  6 23:30:50 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
 
 

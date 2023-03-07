@@ -1,17 +1,13 @@
-module down_counter #(parameter N = 8) (
-  input clk,
-  input rst,
-  output reg [N-1:0] count
-);
+module down_counter(clk, count);
+  input clk;
+  output reg [5:0] count;
 
-always @(posedge clk or posedge rst) begin
-  if (rst) begin
-    count <= {N{1'b1}};
+  always @(posedge clk) begin
+    if (count == 0) begin
+      count <= 63;
+    end else begin
+      count <= count - 1;
+    end
   end
-  else begin
-    count <= count - 1;
-  end
-end
-
 endmodule
 
