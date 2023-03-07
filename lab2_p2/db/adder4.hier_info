@@ -1,0 +1,92 @@
+|adder4
+a[0] => adder4_aux:adder4_1.a[0]
+a[1] => adder4_aux:adder4_1.a[1]
+a[2] => adder4_aux:adder4_1.a[2]
+a[3] => adder4_aux:adder4_1.a[3]
+b[0] => adder4_aux:adder4_1.b[0]
+b[1] => adder4_aux:adder4_1.b[1]
+b[2] => adder4_aux:adder4_1.b[2]
+b[3] => adder4_aux:adder4_1.b[3]
+cin => adder4_aux:adder4_1.cin
+ans[0] << adder4_aux:adder4_1.ans[0]
+ans[1] << adder4_aux:adder4_1.ans[1]
+ans[2] << adder4_aux:adder4_1.ans[2]
+ans[3] << adder4_aux:adder4_1.ans[3]
+cout << adder4_aux:adder4_1.cout
+display[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+display[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+display[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+display_aux[0] << adder4_aux:adder4_1.cout
+display_aux[1] << <GND>
+display_aux[2] << <GND>
+display_aux[3] << adder4_aux:adder4_1.cout
+display_aux[4] << adder4_aux:adder4_1.cout
+display_aux[5] << adder4_aux:adder4_1.cout
+display_aux[6] << <VCC>
+
+
+|adder4|adder4_aux:adder4_1
+a[0] => BIT_ADDER_1:b_adder0.a
+a[1] => BIT_ADDER_1:b_adder1.a
+a[2] => BIT_ADDER_1:b_adder2.a
+a[3] => BIT_ADDER_1:b_adder3.a
+b[0] => BIT_ADDER_1:b_adder0.b
+b[1] => BIT_ADDER_1:b_adder1.b
+b[2] => BIT_ADDER_1:b_adder2.b
+b[3] => BIT_ADDER_1:b_adder3.b
+cin => BIT_ADDER_1:b_adder0.cin
+ans[0] <= BIT_ADDER_1:b_adder0.sum
+ans[1] <= BIT_ADDER_1:b_adder1.sum
+ans[2] <= BIT_ADDER_1:b_adder2.sum
+ans[3] <= BIT_ADDER_1:b_adder3.sum
+cout <= BIT_ADDER_1:b_adder3.cout
+
+
+|adder4|adder4_aux:adder4_1|BIT_ADDER_1:b_adder0
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder4|adder4_aux:adder4_1|BIT_ADDER_1:b_adder1
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder4|adder4_aux:adder4_1|BIT_ADDER_1:b_adder2
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder4|adder4_aux:adder4_1|BIT_ADDER_1:b_adder3
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
