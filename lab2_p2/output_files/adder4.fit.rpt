@@ -1,5 +1,5 @@
 Fitter report for adder4
-Fri Mar  3 17:24:21 2023
+Mon Mar  6 21:32:26 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Mar  3 17:24:21 2023          ;
+; Fitter Status                   ; Successful - Mon Mar  6 21:32:26 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; adder4                                         ;
 ; Top-level Entity Name           ; adder4                                         ;
@@ -153,8 +153,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
-;     Processor 3            ;   1.0%      ;
+;     Processor 2            ;   0.9%      ;
+;     Processor 3            ;   0.9%      ;
 ;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -197,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/output_files/adder4.pin.
+The pin-out file can be found in C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/output_files/adder4.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -1736,23 +1736,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
-Info (144001): Generated suppressed messages file C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/output_files/adder4.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/output_files/adder4.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6475 megabytes
-    Info: Processing ended: Fri Mar  3 17:24:22 2023
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:46
+    Info: Peak virtual memory: 6481 megabytes
+    Info: Processing ended: Mon Mar  6 21:32:27 2023
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:00:48
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/output_files/adder4.fit.smsg.
+The suppressed messages can be found in C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/output_files/adder4.fit.smsg.
 
 

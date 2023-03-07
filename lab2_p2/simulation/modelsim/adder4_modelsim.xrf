@@ -1,11 +1,11 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd
-source_file = 1, C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd
+source_file = 1, C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd
+source_file = 1, C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd
 source_file = 1, d:/quartuslite/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, d:/quartuslite/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, d:/quartuslite/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, d:/quartuslite/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/db/adder4.cbx.xml
+source_file = 1, C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/db/adder4.cbx.xml
 design_name = adder4
 instance = comp, \ans[0]~output\, ans[0]~output, adder4, 1
 instance = comp, \ans[1]~output\, ans[1]~output, adder4, 1

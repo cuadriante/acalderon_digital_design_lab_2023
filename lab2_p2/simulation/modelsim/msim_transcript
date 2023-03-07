@@ -13,25 +13,25 @@
 # Modifying modelsim.ini
 # vcom -93 -work altera {d:/quartuslite/quartus/eda/sim_lib/altera_syn_attributes.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:57 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera d:/quartuslite/quartus/eda/sim_lib/altera_syn_attributes.vhd 
 # -- Loading package STANDARD
 # -- Compiling package altera_syn_attributes
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:01
+# End time: 21:34:28 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera {d:/quartuslite/quartus/eda/sim_lib/altera_standard_functions.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera d:/quartuslite/quartus/eda/sim_lib/altera_standard_functions.vhd 
 # -- Loading package STANDARD
 # -- Compiling package altera_standard_functions
 # -- Compiling package body altera_standard_functions
 # -- Loading package altera_standard_functions
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:28 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera {d:/quartuslite/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera d:/quartuslite/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -40,11 +40,11 @@
 # -- Compiling package alt_dspbuilder_package
 # -- Compiling package body alt_dspbuilder_package
 # -- Loading package alt_dspbuilder_package
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:28 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera {d:/quartuslite/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera d:/quartuslite/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -55,11 +55,11 @@
 # -- Compiling package altera_europa_support_lib
 # -- Compiling package body altera_europa_support_lib
 # -- Loading package altera_europa_support_lib
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:28 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera {d:/quartuslite/quartus/eda/sim_lib/altera_primitives_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera d:/quartuslite/quartus/eda/sim_lib/altera_primitives_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -69,11 +69,11 @@
 # -- Compiling package dffeas_pack
 # -- Loading package dffeas_pack
 # -- Compiling package altera_primitives_components
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:28 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera {d:/quartuslite/quartus/eda/sim_lib/altera_primitives.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera d:/quartuslite/quartus/eda/sim_lib/altera_primitives.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -161,7 +161,7 @@
 # -- Compiling architecture BEHAVIOR of alt_bidir_diff
 # -- Compiling entity alt_bidir_buf
 # -- Compiling architecture BEHAVIOR of alt_bidir_buf
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:28 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/lpm
@@ -172,17 +172,17 @@
 # Modifying modelsim.ini
 # vcom -93 -work lpm {d:/quartuslite/quartus/eda/sim_lib/220pack.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:28 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work lpm d:/quartuslite/quartus/eda/sim_lib/220pack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package LPM_COMPONENTS
-# End time: 00:26:58 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:29 on Mar 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work lpm {d:/quartuslite/quartus/eda/sim_lib/220model.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:58 on Mar 03,2023
+# Start time: 21:34:29 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work lpm d:/quartuslite/quartus/eda/sim_lib/220model.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -278,7 +278,7 @@
 # -- Compiling architecture LPM_SYN of LPM_OUTpad
 # -- Compiling entity LPM_BIpad
 # -- Compiling architecture LPM_SYN of LPM_BIpad
-# End time: 00:26:59 on Mar 03,2023, Elapsed time: 0:00:01
+# End time: 21:34:29 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/sgate
@@ -289,7 +289,7 @@
 # Modifying modelsim.ini
 # vcom -93 -work sgate {d:/quartuslite/quartus/eda/sim_lib/sgate_pack.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:59 on Mar 03,2023
+# Start time: 21:34:29 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work sgate d:/quartuslite/quartus/eda/sim_lib/sgate_pack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -297,11 +297,11 @@
 # -- Compiling package sgate_pack
 # -- Compiling package body sgate_pack
 # -- Loading package sgate_pack
-# End time: 00:26:59 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:29 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work sgate {d:/quartuslite/quartus/eda/sim_lib/sgate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:59 on Mar 03,2023
+# Start time: 21:34:29 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work sgate d:/quartuslite/quartus/eda/sim_lib/sgate.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -351,7 +351,7 @@
 # -- Compiling architecture sim_arch of oper_bus_mux
 # -- Compiling entity oper_latch
 # -- Compiling architecture sim_arch of oper_latch
-# End time: 00:26:59 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:29 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/altera_mf
@@ -362,17 +362,17 @@
 # Modifying modelsim.ini
 # vcom -93 -work altera_mf {d:/quartuslite/quartus/eda/sim_lib/altera_mf_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:59 on Mar 03,2023
+# Start time: 21:34:29 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera_mf d:/quartuslite/quartus/eda/sim_lib/altera_mf_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package altera_mf_components
-# End time: 00:26:59 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:30 on Mar 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera_mf {d:/quartuslite/quartus/eda/sim_lib/altera_mf.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:26:59 on Mar 03,2023
+# Start time: 21:34:30 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera_mf d:/quartuslite/quartus/eda/sim_lib/altera_mf.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -611,7 +611,7 @@
 # -- Compiling architecture sim_sld_virtual_jtag_basic of sld_virtual_jtag_basic
 # -- Compiling entity altsource_probe
 # -- Compiling architecture sim_altsource_probe of altsource_probe
-# End time: 00:27:00 on Mar 03,2023, Elapsed time: 0:00:01
+# End time: 21:34:31 on Mar 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/altera_lnsim
@@ -622,21 +622,21 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim {d:/quartuslite/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:00 on Mar 03,2023
+# Start time: 21:34:31 on Mar 06,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim d:/quartuslite/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv 
 # 
 # Top level modules:
-# End time: 00:27:01 on Mar 03,2023, Elapsed time: 0:00:01
+# End time: 21:34:33 on Mar 06,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vcom -93 -work altera_lnsim {d:/quartuslite/quartus/eda/sim_lib/altera_lnsim_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:01 on Mar 03,2023
+# Start time: 21:34:33 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work altera_lnsim d:/quartuslite/quartus/eda/sim_lib/altera_lnsim_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package altera_lnsim_components
-# End time: 00:27:01 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:33 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/cyclonev
@@ -647,7 +647,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev {d:/quartuslite/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:02 on Mar 03,2023
+# Start time: 21:34:33 on Mar 06,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev d:/quartuslite/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -661,11 +661,11 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 00:27:04 on Mar 03,2023, Elapsed time: 0:00:02
+# End time: 21:34:36 on Mar 06,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 20
 # vcom -93 -work cyclonev {d:/quartuslite/quartus/eda/sim_lib/cyclonev_atoms.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:04 on Mar 03,2023
+# Start time: 21:34:36 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work cyclonev d:/quartuslite/quartus/eda/sim_lib/cyclonev_atoms.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -805,11 +805,11 @@
 # -- Compiling architecture behavior of cyclonev_ir_fifo_userdes
 # -- Compiling entity cyclonev_oscillator
 # -- Compiling architecture behavior of cyclonev_oscillator
-# End time: 00:27:05 on Mar 03,2023, Elapsed time: 0:00:01
+# End time: 21:34:36 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vcom -93 -work cyclonev {d:/quartuslite/quartus/eda/sim_lib/cyclonev_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:05 on Mar 03,2023
+# Start time: 21:34:36 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work cyclonev d:/quartuslite/quartus/eda/sim_lib/cyclonev_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -818,7 +818,7 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cyclonev_atom_pack
 # -- Compiling package cyclonev_components
-# End time: 00:27:05 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:36 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/cyclonev_hssi
@@ -829,7 +829,7 @@
 # Modifying modelsim.ini
 # vcom -93 -work cyclonev_hssi {d:/quartuslite/quartus/eda/sim_lib/cyclonev_hssi_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:05 on Mar 03,2023
+# Start time: 21:34:36 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work cyclonev_hssi d:/quartuslite/quartus/eda/sim_lib/cyclonev_hssi_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -837,19 +837,19 @@
 # -- Compiling package CYCLONEV_HSSI_COMPONENTS
 # -- Compiling package body CYCLONEV_HSSI_COMPONENTS
 # -- Loading package CYCLONEV_HSSI_COMPONENTS
-# End time: 00:27:05 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:36 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi {d:/quartuslite/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:05 on Mar 03,2023
+# Start time: 21:34:36 on Mar 06,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi d:/quartuslite/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 00:27:07 on Mar 03,2023, Elapsed time: 0:00:02
+# End time: 21:34:38 on Mar 06,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vcom -93 -work cyclonev_hssi {d:/quartuslite/quartus/eda/sim_lib/cyclonev_hssi_atoms.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:07 on Mar 03,2023
+# Start time: 21:34:38 on Mar 06,2023
 # vcom -reportprogress 300 -93 -work cyclonev_hssi d:/quartuslite/quartus/eda/sim_lib/cyclonev_hssi_atoms.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -903,7 +903,7 @@
 # -- Compiling architecture behavior of cyclonev_hssi_pma_hi_pmaif
 # -- Compiling entity cyclonev_hssi_pma_hi_xcvrif
 # -- Compiling architecture behavior of cyclonev_hssi_pma_hi_xcvrif
-# End time: 00:27:07 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:39 on Mar 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -915,10 +915,10 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd}
+# vcom -93 -work work {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:07 on Mar 03,2023
-# vcom -reportprogress 300 -93 -work work C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd 
+# Start time: 21:34:39 on Mar 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -928,24 +928,24 @@
 # -- Compiling architecture STRUCTURE of adder4_aux
 # -- Compiling entity adder4
 # -- Compiling architecture BHV of adder4
-# End time: 00:27:07 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:39 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd}
+# vcom -93 -work work {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:27:07 on Mar 03,2023
-# vcom -reportprogress 300 -93 -work work C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd 
+# Start time: 21:34:39 on Mar 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity TEST_ADD4
 # -- Compiling architecture behavior of TEST_ADD4
-# End time: 00:27:07 on Mar 03,2023, Elapsed time: 0:00:00
+# End time: 21:34:39 on Mar 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  ADDER4
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" ADDER4 
-# Start time: 00:27:07 on Mar 03,2023
+# Start time: 21:34:39 on Mar 06,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -959,5 +959,26 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 00:27:15 on Mar 03,2023, Elapsed time: 0:00:08
+vsim work.test_add4
+# End time: 21:34:49 on Mar 06,2023, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
+# vsim work.test_add4 
+# Start time: 21:34:49 on Mar 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.test_add4(behavior)
+# Loading work.adder4(bhv)
+# Loading work.adder4_aux(structure)
+# Loading work.bit_adder_1(bhv)
+run -all
+add wave -position insertpoint  \
+sim:/test_add4/a \
+sim:/test_add4/b \
+sim:/test_add4/cin \
+sim:/test_add4/ans \
+sim:/test_add4/cout
+# Break key hit
+# Break in Process line__95 at C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd line 97
+# End time: 21:35:41 on Mar 06,2023, Elapsed time: 0:00:52
 # Errors: 0, Warnings: 0

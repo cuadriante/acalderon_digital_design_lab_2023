@@ -7,36 +7,36 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/simulation/modelsim
+Z0 dC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/simulation/modelsim
 Eadder4
-Z1 w1677824087
+Z1 w1678159020
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd
-Z5 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd
+Z4 8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd
+Z5 FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd
 l0
-L68
-Vf8cUG?CUZJ6SejV61P2n50
-!s100 =UQJ4KI]MR;<=eEW29a0b0
+L71
+V[iL0fHm9@YEL0X8o=SnUQ3
+!s100 Q80nLf]1CLfBSo@RN@B8;0
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1677824827
+Z7 !s110 1678160079
 !i10b 1
-Z8 !s108 1677824827.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd|
-Z10 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd|
+Z8 !s108 1678160079.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd|
+Z10 !s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
 Abhv
 R2
 R3
-DEx4 work 6 adder4 0 22 f8cUG?CUZJ6SejV61P2n50
-l88
-L78
-VDAFkVQEaWd:m@GHn`VgFX3
-!s100 VVH;cBola1zdEjeF?]?H;1
+DEx4 work 6 adder4 0 22 [iL0fHm9@YEL0X8o=SnUQ3
+l92
+L81
+VjO0S`lo?3Le?K>:SCJXjj2
+!s100 K`jN72A:[19NNm^z??SH?1
 R6
 31
 R7
@@ -55,9 +55,9 @@ R0
 R4
 R5
 l0
-L32
-VR;MTI;:<ch_HlS:GX4hJZ1
-!s100 3a4b[S:h]0SQeVO9EQ]NC3
+L34
+VGIVnl>PDQOR4g:]mmaJb<0
+!s100 M=SQ1Uj>Z2EaGlz<[2:kb2
 R6
 31
 R7
@@ -71,11 +71,11 @@ R12
 Astructure
 R2
 R3
-DEx4 work 10 adder4_aux 0 22 R;MTI;:<ch_HlS:GX4hJZ1
-l53
-L41
-VOPjJ[C18g;lAoTg554c>a3
-!s100 M2O7S45T:O_2Uo^WP`IY[3
+DEx4 work 10 adder4_aux 0 22 GIVnl>PDQOR4g:]mmaJb<0
+l55
+L43
+VQ0`c2U7l3CaV;[IoKT?h82
+!s100 XH^4O;6[ln`6g1>2?mS`A3
 R6
 31
 R7
@@ -94,9 +94,9 @@ R0
 R4
 R5
 l0
-L8
-VfOkQlNYaa=J[5lmo9i<g62
-!s100 7S`nCK0`kYm89kgHE2o>03
+L7
+V>GJXlTmd7TRe7XmBP9AG70
+!s100 Q`RC4gbf1YYYL^2Rhe5hg3
 R6
 31
 R7
@@ -110,11 +110,11 @@ R12
 Abhv
 R2
 R3
-DEx4 work 11 bit_adder_1 0 22 fOkQlNYaa=J[5lmo9i<g62
-l14
-L13
-VTORG[Hee0eFhR74=JO=:f3
-!s100 ZB2fZcA0f?=B9UGF[bEiY0
+DEx4 work 11 bit_adder_1 0 22 >GJXlTmd7TRe7XmBP9AG70
+l13
+L12
+V8jPkjgTl=58fc4jS[I@OY1
+!s100 haEb1?AfeX3@7]3VR>X;31
 R6
 31
 R7
@@ -126,34 +126,34 @@ R10
 R11
 R12
 Etest_add4
-Z13 w1677824783
+Z13 w1678158250
 R2
 R3
 R0
-Z14 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd
-Z15 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd
+Z14 8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd
+Z15 FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd
 l0
-L17
-VM<dRbzIYJ<i3V=U74a@2i3
-!s100 LkmcgXze@771DzbeTYH5T1
+L7
+V=mHE`=zIATNLeYjQQNUaL0
+!s100 iARCnkjOFm;KH^E@z_mdM3
 R6
 31
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd|
-Z17 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd|
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd|
+Z17 !s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd|
 !i113 1
 R11
 R12
 Abehavior
 R2
 R3
-DEx4 work 9 test_add4 0 22 M<dRbzIYJ<i3V=U74a@2i3
-l38
-L22
-VXPoJ6jXV::_3I@6J7PY0V1
-!s100 OPM_1XM]BJSd[d<iV81iM1
+DEx4 work 9 test_add4 0 22 =mHE`=zIATNLeYjQQNUaL0
+l28
+L12
+VhWYEGH0KaSRm_>7fXj2N53
+!s100 EVChZXSXfY1c2@WF0HR8>0
 R6
 31
 R7

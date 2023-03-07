@@ -50,9 +50,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4.vhd}
+vcom -93 -work work {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4.vhd}
 
-vcom -93 -work work {C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller2Funciona/adder4_tst.vhd}
+vcom -93 -work work {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab2_p2/adder4_tst.vhd}
 
 vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  ADDER4
 

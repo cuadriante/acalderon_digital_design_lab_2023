@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition"
 
--- DATE "03/03/2023 17:24:41"
+-- DATE "03/06/2023 21:32:52"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -39,10 +39,10 @@ ENTITY 	adder4 IS
 	a : IN std_logic_vector(3 DOWNTO 0);
 	b : IN std_logic_vector(3 DOWNTO 0);
 	cin : IN std_logic;
-	ans : OUT std_logic_vector(3 DOWNTO 0);
-	cout : OUT std_logic;
-	display : OUT std_logic_vector(6 DOWNTO 0);
-	display_aux : OUT std_logic_vector(6 DOWNTO 0)
+	ans : BUFFER std_logic_vector(3 DOWNTO 0);
+	cout : BUFFER std_logic;
+	display : BUFFER std_logic_vector(6 DOWNTO 0);
+	display_aux : BUFFER std_logic_vector(6 DOWNTO 0)
 	);
 END adder4;
 

@@ -35,7 +35,7 @@ entity adder4_aux is
 	port( a, b		: in	STD_LOGIC_VECTOR(3 downto 0);
 			cin      : in STD_LOGIC;
 	      ans		: out	STD_LOGIC_VECTOR(3 downto 0);
---	      cout		: out	STD_LOGIC);
+	      cout		: out	STD_LOGIC);
 end adder4_aux;
 
 
@@ -111,6 +111,7 @@ begin
 			when "1101" => display <= "0100001"; -- d      1000010
 			when "1110" => display <= "0000110"; -- E
 			when "1111" => display <= "0001110"; -- F
+			when others => display <= "1000000"; -- "0"    0000001 
 		end case;
 	end process;
 	
@@ -119,6 +120,7 @@ begin
 		case cout_aux is
 			when '0' => display_aux <= "1000000"; -- "0"     
 			when '1' => display_aux <= "1111001"; -- "1" 
+			when others => display_aux <= "1000000"; -- "0" 
 		end case;
 	end process;
 	ans <= ans_aux_2;

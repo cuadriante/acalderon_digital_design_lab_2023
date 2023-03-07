@@ -8,25 +8,25 @@ b[1] => adder4_aux:adder4_1.b[1]
 b[2] => adder4_aux:adder4_1.b[2]
 b[3] => adder4_aux:adder4_1.b[3]
 cin => adder4_aux:adder4_1.cin
-ans[0] <= adder4_aux:adder4_1.ans[0]
-ans[1] <= adder4_aux:adder4_1.ans[1]
-ans[2] <= adder4_aux:adder4_1.ans[2]
-ans[3] <= adder4_aux:adder4_1.ans[3]
-cout <= adder4_aux:adder4_1.cout
-display[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-display[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-display[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-display[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-display[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-display[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-display[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-display_aux[0] <= adder4_aux:adder4_1.cout
-display_aux[1] <= <GND>
-display_aux[2] <= <GND>
-display_aux[3] <= adder4_aux:adder4_1.cout
-display_aux[4] <= adder4_aux:adder4_1.cout
-display_aux[5] <= adder4_aux:adder4_1.cout
-display_aux[6] <= <VCC>
+ans[0] << adder4_aux:adder4_1.ans[0]
+ans[1] << adder4_aux:adder4_1.ans[1]
+ans[2] << adder4_aux:adder4_1.ans[2]
+ans[3] << adder4_aux:adder4_1.ans[3]
+cout << adder4_aux:adder4_1.cout
+display[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+display[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+display[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+display_aux[0] << adder4_aux:adder4_1.cout
+display_aux[1] << <GND>
+display_aux[2] << <GND>
+display_aux[3] << adder4_aux:adder4_1.cout
+display_aux[4] << adder4_aux:adder4_1.cout
+display_aux[5] << adder4_aux:adder4_1.cout
+display_aux[6] << <VCC>
 
 
 |adder4|adder4_aux:adder4_1
