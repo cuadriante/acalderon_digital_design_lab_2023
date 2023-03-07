@@ -1,0 +1,135 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# Date created = 00:21:43  marzo 07, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		top_module_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY top_module
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:21:43  MARZO 07, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_A3 -to rst
+set_location_assignment PIN_A4 -to clk
+set_location_assignment PIN_A5 -to segment[6]
+set_location_assignment PIN_A6 -to segment[5]
+set_location_assignment PIN_A8 -to segment[4]
+set_location_assignment PIN_A9 -to segment[3]
+set_location_assignment PIN_A10 -to segment[2]
+set_location_assignment PIN_A11 -to segment[1]
+set_location_assignment PIN_A13 -to segment[0]
+set_location_assignment PIN_AA12 -to CLK
+set_location_assignment PIN_AA13 -to LED[3]
+set_location_assignment PIN_AA14 -to LED[2]
+set_location_assignment PIN_AA15 -to LED[1]
+set_location_assignment PIN_AA16 -to LED[0]
+set_location_assignment PIN_AA18 -to SSEG_AN[7]
+set_location_assignment PIN_AA19 -to SSEG_AN[6]
+set_location_assignment PIN_AA20 -to SSEG_AN[5]
+set_location_assignment PIN_AA21 -to SSEG_AN[4]
+set_location_assignment PIN_AA24 -to SSEG_AN[3]
+set_location_assignment PIN_AA25 -to SSEG_AN[2]
+set_location_assignment PIN_AA26 -to SSEG_AN[1]
+set_location_assignment PIN_AA28 -to SSEG_AN[0]
+set_location_assignment PIN_AA30 -to SSEG_CA[4]
+set_location_assignment PIN_AB12 -to SSEG_CA[7]
+set_location_assignment PIN_AB13 -to SSEG_CA[6]
+set_location_assignment PIN_AB15 -to SSEG_CA[5]
+set_location_assignment PIN_AB17 -to SSEG_CA[3]
+set_location_assignment PIN_AB21 -to SSEG_CA[1]
+set_location_assignment PIN_AB22 -to SSEG_CA[2]
+set_location_assignment PIN_AB23 -to SSEG_CA[0]
+set_location_assignment PIN_AB25 -to SW[3]
+set_location_assignment PIN_AB26 -to SW[1]
+set_location_assignment PIN_AB27 -to SW[2]
+set_location_assignment PIN_AB28 -to SW[0]
+set_global_assignment -name SYSTEMVERILOG_FILE top_module.sv
+set_location_assignment PIN_AB30 -to reset
+set_location_assignment PIN_AC9 -to seg_out1[5]
+set_location_assignment PIN_AC12 -to seg_out1[4]
+set_location_assignment PIN_AC14 -to seg_out1[3]
+set_location_assignment PIN_AC18 -to seg_out1[2]
+set_location_assignment PIN_AC20 -to seg_out1[1]
+set_location_assignment PIN_AC22 -to seg_out1[0]
+set_location_assignment PIN_AC23 -to seg_out2[5]
+set_location_assignment PIN_AC25 -to seg_out2[4]
+set_location_assignment PIN_AC27 -to seg_out2[3]
+set_location_assignment PIN_AC28 -to seg_out2[1]
+set_location_assignment PIN_AC29 -to seg_out2[2]
+set_location_assignment PIN_AC30 -to seg_out2[0]
+set_location_assignment PIN_AD7 -to seg_out3[5]
+set_location_assignment PIN_AD9 -to seg_out3[3]
+set_location_assignment PIN_AD10 -to seg_out3[4]
+set_location_assignment PIN_AD11 -to seg_out3[2]
+set_location_assignment PIN_AD12 -to seg_out3[1]
+set_location_assignment PIN_AD14 -to seg_out3[0]
+set_location_assignment PIN_AD17 -to seg_out4[4]
+set_location_assignment PIN_AD19 -to seg_out4[5]
+set_location_assignment PIN_AD20 -to seg_out6[0]
+set_location_assignment PIN_AD21 -to seg_out4[3]
+set_location_assignment PIN_AD24 -to seg_out4[2]
+set_location_assignment PIN_AD25 -to seg_out4[1]
+set_location_assignment PIN_AD26 -to seg_out4[0]
+set_location_assignment PIN_AD27 -to seg_out5[4]
+set_location_assignment PIN_AF25 -to seg_out5[5]
+set_location_assignment PIN_AD29 -to seg_out5[3]
+set_location_assignment PIN_AD30 -to seg_out6[2]
+set_location_assignment PIN_AE7 -to seg_out5[2]
+set_location_assignment PIN_AE9 -to seg_out6[1]
+set_location_assignment PIN_AE11 -to seg_out5[0]
+set_location_assignment PIN_AE12 -to seg_out5[1]
+set_location_assignment PIN_AE13 -to seg_out6[4]
+set_location_assignment PIN_AE14 -to seg_out6[5]
+set_location_assignment PIN_AE16 -to seg_out6[3]
+set_global_assignment -name VERILOG_FILE top_module.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
