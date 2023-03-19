@@ -1,0 +1,28 @@
+
+
+module tb_alu;
+ // Inputs
+ reg [31:0] input1;
+ reg [31:0] input2;
+ reg cin;
+ // Outputs
+ wire [31:0] answer;
+
+ // Instantiate the Unit Under Test (UUT)
+ alu uut (
+  .input1(input1), 
+  .input2(input2),
+  .cin(cin),
+  .answer(answer)
+ );
+
+ initial begin
+  // Initialize Inputs
+  input1 = 1209;
+  input2 = 4565;
+  cin = 0;
+  #100;
+  // Add stimulus here
+ end
+      
+endmodule

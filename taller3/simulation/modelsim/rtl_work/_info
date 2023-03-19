@@ -1,0 +1,235 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/simulation/modelsim
+valu
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1679011180
+!i10b 1
+!s100 E]hdMefV4jPfTm2b??@CJ3
+Ie@jRMDIj3kDTe5MK]elXg2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 alu_sv_unit
+S1
+R0
+Z5 w1679011145
+Z6 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/alu.sv
+Z7 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/alu.sv
+L0 7
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1679011180.000000
+Z10 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/alu.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/alu.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3
+Z14 tCvgOpt 0
+vbit_compare
+R1
+R2
+!i10b 1
+!s100 S4TOP1Me2hg0li;elejBC2
+I0@MKi1LBhG>hb6[GdL=HC1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 227
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 W`:0le[EMO@`:SBk5@VE=2
+IhVzjJnRU]1bAnYE81RLP82
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 200
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vn_bit_adder
+R1
+R2
+!i10b 1
+!s100 iOIfEK_OJaL=5b>T3RAM`1
+IC5R;D@>AKeFG;g;nBmmjX2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 163
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vn_bit_adder_sub
+R1
+R2
+!i10b 1
+!s100 cbOK9O7VD:aWzdK[2BBFb1
+IHOz_oQnXZd]IWo[Z;nO6C2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 174
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vn_bit_compare
+R1
+R2
+!i10b 1
+!s100 8AL`cVQ]B=kbeV6zPg0]43
+I]QP02VHR_<MJSMV2KQP]S1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 209
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vn_bit_substractor
+R1
+R2
+!i10b 1
+!s100 IPG@XCNDYA4UIRQ1?[XNC0
+IMznKZ>@3Qc5Lod1UXbPEa3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 127
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vresultado
+R1
+R2
+!i10b 1
+!s100 UJRkNRf=QKRCjCiUUm?=b3
+IPQSIh0CLdEP<o2eI2T5>b0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 95
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vtb_alu
+R1
+R2
+!i10b 1
+!s100 ;>8>>mb266Im<AE]BZ_EW2
+IEMG_hOK`l?dBFQ[H=HN@X2
+R3
+!s105 tb_alu_sv_unit
+S1
+R0
+w1679010107
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/tb_alu.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/tb_alu.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/tb_alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/taller/taller3/tb_alu.sv|
+!i113 1
+R12
+R13
+R14
