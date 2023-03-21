@@ -1,77 +1,52 @@
-module alu #(parameter N=4)(input [N-1:0] a, b, input[3:0] selec, output [N-1:0] resultado, 
-									 output zero, neg, carry);
+module alu #(parameter N=4)(input [N-1:0] a, b, input[2:0] op, output [N-1:0] resultado, 
+									 output cout, zero, neg, overflow);
 	logic[N:0] rs, rr;
-	logic[N-1:0] r_and, r_or, r_xor, r_shiftR, r_shiftL;
+	logic[N-1:0] r_and, r_or, r_xor, r_shiftR, r_shiftL, resultado_s, resultado_r, resultado_aux;
+	logic cout_aux, neg_aux, zero_aux, overflow_aux;
+	logic cout_aux_s, neg_aux_s, zero_aux_s, overflow_aux_s;
+	logic cout_aux_r, neg_aux_r, zero_aux_r, overflow_aux_r;
+	logic [6:0] display_s, display_r;
 	
-	arith_alu AU(a, b, rs, rr);
+	logic [N-1:0] aux;
 	logic_alu LU(a, b, r_and, r_or, r_xor, r_shiftR, r_shiftL);
-	multiplexor mp(rs, rr, r_and, r_or, r_xor, r_shiftR, r_shiftL, selec, r);
-	
-	assign result = r;
-	
-endmodule 
+	arith_alu AUS(a, b, 0, resultado_s, cout_aux_s, neg_aux_s, zero_aux_s, overflow_aux_s, display_s);
+	arith_alu AUR(a, b, 1, resultado_r, cout_aux_r, neg_aux_r, zero_aux_r, overflow_aux_r, display_r);
 
-module banderaN(input signo, input [3:0] selec, output N);
-	logic N_aux;
-	always @ (selec) begin
-		if(selec == 0001)
-			N_aux = signo;
-		else
-			N_aux = 0;
-		end
-	assign N = N_aux;
-endmodule
+	always @(op) begin
+	case (op)
+		3'b000: // a + b
+		 resultado_aux = resultado_s;
+		 
 
-module banderaZ#(parameter N=4)(input [N:0] a, b, c,d,e, f, g, input [3:0] ss, output  flag);
-logic aux;
-
-always @(ss) begin
-	case (ss)
-		0:
-			aux = !(a|a);
-
-		1:
-			aux = !(b|b);
+		3'b001: // a - b
+		 resultado_aux = resultado_r;
+		
 			
-		2:
-			aux = !(c|c);
-
-		3:
-			aux = !(d|d);
-
 			
-		4:
-			aux = !(e|e);
+		3'b010:
+			resultado_aux = r_and;
 
-		5:
-			aux = !(f|f);
+		3'b011:
+			resultado_aux = r_or;
 
-		6:
-			aux = !(g|g);
+		3'b100:
+			resultado_aux = r_xor;
 
+		3'b101:
+			resultado_aux = r_shiftR;
+
+		3'b110:
+			resultado_aux = r_shiftL;
 	
-		default: aux = 0;
+		default: resultado_aux = 0;
 	endcase
-	
-end
-
-assign flag = aux;	
-
-
-endmodule
-
-module banderaC(input rs, input [3:0] s, output C);
-	logic aux;
-	always @ (rs, s) begin
-		if (s == 0000) begin
-			aux = rs;
-		end
-		else begin 
-			aux = 0;
-		end
 	end
-	assign C = aux;
-endmodule
 
-module banderaV();
+	//assign resultado = 4'b0000;
+	assign resultado = resultado_s;
+	assign cout = cout_aux;
+	assign neg = neg_aux;
+	assign zero = zero_aux;
+	assign overflow = overflow_aux;
+	
 endmodule 

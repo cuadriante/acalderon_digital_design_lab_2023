@@ -4,10 +4,11 @@
 
 
 
-module arith_alu(input1, input2, answer, cout, neg, zero, overflow, display);
+module arith_alu(input1, input2, option, answer, cout, neg, zero, overflow, display);
 	parameter N=4;
-	parameter option=2;
+	
 	input [N-1:0] input1, input2;
+	input option;
 	output [N-1:0] answer;
 	output cout, neg, zero, overflow;
 	
@@ -33,10 +34,10 @@ module arith_alu(input1, input2, answer, cout, neg, zero, overflow, display);
 	n_bit_substractor U1(.input1(input1), .input2(input2), .answer(answerr), .neg(neg_b));
 	
 	always @* begin
-	if (option == 1) begin
+	if (option == 0) begin
 		answerp = answers;
 		cout_a = cout_b;
-	end else if (option == 2) begin
+	end else if (option == 1) begin
 		answerp = answerr;
 		neg_a = neg_b;
 	end
