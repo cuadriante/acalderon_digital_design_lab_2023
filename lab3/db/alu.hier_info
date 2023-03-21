@@ -1,0 +1,729 @@
+|alu
+a[0] => a[0].IN3
+a[1] => a[1].IN3
+a[2] => a[2].IN3
+a[3] => a[3].IN3
+b[0] => b[0].IN3
+b[1] => b[1].IN3
+b[2] => b[2].IN3
+b[3] => b[3].IN3
+op[0] => ~NO_FANOUT~
+op[1] => ~NO_FANOUT~
+op[2] => ~NO_FANOUT~
+resultado[0] <= arith_alu:AUS.port3
+resultado[1] <= arith_alu:AUS.port3
+resultado[2] <= arith_alu:AUS.port3
+resultado[3] <= arith_alu:AUS.port3
+cout <= <GND>
+zero <= <GND>
+neg <= <GND>
+overflow <= <GND>
+
+
+|alu|logic_alu:LU
+a[0] => a[0].IN5
+a[1] => a[1].IN5
+a[2] => a[2].IN5
+a[3] => a[3].IN5
+b[0] => b[0].IN3
+b[1] => b[1].IN3
+b[2] => b[2].IN3
+b[3] => b[3].IN3
+r_and[0] <= and_gate:u1.port2
+r_and[1] <= and_gate:u1.port2
+r_and[2] <= and_gate:u1.port2
+r_and[3] <= and_gate:u1.port2
+r_or[0] <= or_gate:u2.port2
+r_or[1] <= or_gate:u2.port2
+r_or[2] <= or_gate:u2.port2
+r_or[3] <= or_gate:u2.port2
+r_xor[0] <= xor_gate:u3.port2
+r_xor[1] <= xor_gate:u3.port2
+r_xor[2] <= xor_gate:u3.port2
+r_xor[3] <= xor_gate:u3.port2
+r_shiftR[0] <= shiftR_gate:u4.port1
+r_shiftR[1] <= shiftR_gate:u4.port1
+r_shiftR[2] <= shiftR_gate:u4.port1
+r_shiftR[3] <= shiftR_gate:u4.port1
+r_shiftL[0] <= shiftL_gate:u5.port1
+r_shiftL[1] <= shiftL_gate:u5.port1
+r_shiftL[2] <= shiftL_gate:u5.port1
+r_shiftL[3] <= shiftL_gate:u5.port1
+
+
+|alu|logic_alu:LU|and_gate:u1
+a => r_and_gate.IN0
+b => r_and_gate.IN1
+r_and_gate <= r_and_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|logic_alu:LU|or_gate:u2
+a => r_or_gate.IN0
+b => r_or_gate.IN1
+r_or_gate <= r_or_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|logic_alu:LU|xor_gate:u3
+a => r_xor_gate.IN0
+b => r_xor_gate.IN1
+r_xor_gate <= r_xor_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|logic_alu:LU|shiftR_gate:u4
+a => ShiftRight0.IN1
+b => ShiftRight0.IN2
+r_shiftR_gate <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|logic_alu:LU|shiftL_gate:u5
+a => ShiftLeft0.IN1
+b => ShiftLeft0.IN2
+r_shiftL_gate <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS
+input1[0] => n_bit_adder:U0.input1[0]
+input1[0] => n_bit_substractor:U1.input1[0]
+input1[1] => n_bit_adder:U0.input1[1]
+input1[1] => n_bit_substractor:U1.input1[1]
+input1[2] => n_bit_adder:U0.input1[2]
+input1[2] => n_bit_substractor:U1.input1[2]
+input1[3] => n_bit_adder:U0.input1[3]
+input1[3] => n_bit_substractor:U1.input1[3]
+input2[0] => n_bit_adder:U0.input2[0]
+input2[0] => n_bit_substractor:U1.input2[0]
+input2[1] => n_bit_adder:U0.input2[1]
+input2[1] => n_bit_substractor:U1.input2[1]
+input2[2] => n_bit_adder:U0.input2[2]
+input2[2] => n_bit_substractor:U1.input2[2]
+input2[3] => n_bit_adder:U0.input2[3]
+input2[3] => n_bit_substractor:U1.input2[3]
+option => neg_a.LATCH_ENABLE
+option => answerp[0].OUTPUTSELECT
+option => answerp[1].OUTPUTSELECT
+option => answerp[2].OUTPUTSELECT
+option => answerp[3].OUTPUTSELECT
+option => cout_a.LATCH_ENABLE
+answer[0] <= answerp[0].DB_MAX_OUTPUT_PORT_TYPE
+answer[1] <= answerp[1].DB_MAX_OUTPUT_PORT_TYPE
+answer[2] <= answerp[2].DB_MAX_OUTPUT_PORT_TYPE
+answer[3] <= answerp[3].DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout_a.DB_MAX_OUTPUT_PORT_TYPE
+neg <= neg_a.DB_MAX_OUTPUT_PORT_TYPE
+zero <= resultado:U2.zero_a
+overflow <= resultado:U2.over_a
+display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_adder:U0
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+answer[0] <= n_bit_adder_sub:U0.answer
+answer[1] <= n_bit_adder_sub:U0.answer
+answer[2] <= n_bit_adder_sub:U0.answer
+answer[3] <= n_bit_adder_sub:U0.answer
+cout <= n_bit_adder_sub:U0.cout
+
+
+|alu|arith_alu:AUS|n_bit_adder:U0|n_bit_adder_sub:U0
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+cin => cin.IN1
+answer[0] <= full_adder:generate_N_bit_Adder[0].f.port3
+answer[1] <= full_adder:generate_N_bit_Adder[1].f.port3
+answer[2] <= full_adder:generate_N_bit_Adder[2].f.port3
+answer[3] <= full_adder:generate_N_bit_Adder[3].f.port3
+cout <= full_adder:generate_N_bit_Adder[3].f.port4
+
+
+|alu|arith_alu:AUS|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[0].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[1].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[2].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[3].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+answer[0] <= n_bit_adder_sub:U1.answer
+answer[1] <= n_bit_adder_sub:U1.answer
+answer[2] <= n_bit_adder_sub:U1.answer
+answer[3] <= n_bit_adder_sub:U1.answer
+neg <= n_bit_compare:U0.smaller
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1|n_bit_compare:U0
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+smaller <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1|n_bit_adder_sub:U1
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+cin => cin.IN1
+answer[0] <= full_adder:generate_N_bit_Adder[0].f.port3
+answer[1] <= full_adder:generate_N_bit_Adder[1].f.port3
+answer[2] <= full_adder:generate_N_bit_Adder[2].f.port3
+answer[3] <= full_adder:generate_N_bit_Adder[3].f.port3
+cout <= full_adder:generate_N_bit_Adder[3].f.port4
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[0].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[1].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[2].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[3].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|resultado:U2
+answerp[0] => n_bit_compare:U2.a[0]
+answerp[0] => n_bit_compare:U3.b[0]
+answerp[1] => n_bit_compare:U2.a[1]
+answerp[1] => n_bit_compare:U3.b[1]
+answerp[2] => n_bit_compare:U2.a[2]
+answerp[2] => n_bit_compare:U3.b[2]
+answerp[3] => n_bit_compare:U2.a[3]
+answerp[3] => n_bit_compare:U3.b[3]
+cout => zero_b.OUTPUTSELECT
+cout => over_b.OUTPUTSELECT
+zero_a <= zero_b.DB_MAX_OUTPUT_PORT_TYPE
+over_a <= over_b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|resultado:U2|n_bit_compare:U2
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+smaller <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUS|resultado:U2|n_bit_compare:U3
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+smaller <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR
+input1[0] => n_bit_adder:U0.input1[0]
+input1[0] => n_bit_substractor:U1.input1[0]
+input1[1] => n_bit_adder:U0.input1[1]
+input1[1] => n_bit_substractor:U1.input1[1]
+input1[2] => n_bit_adder:U0.input1[2]
+input1[2] => n_bit_substractor:U1.input1[2]
+input1[3] => n_bit_adder:U0.input1[3]
+input1[3] => n_bit_substractor:U1.input1[3]
+input2[0] => n_bit_adder:U0.input2[0]
+input2[0] => n_bit_substractor:U1.input2[0]
+input2[1] => n_bit_adder:U0.input2[1]
+input2[1] => n_bit_substractor:U1.input2[1]
+input2[2] => n_bit_adder:U0.input2[2]
+input2[2] => n_bit_substractor:U1.input2[2]
+input2[3] => n_bit_adder:U0.input2[3]
+input2[3] => n_bit_substractor:U1.input2[3]
+option => neg_a.LATCH_ENABLE
+option => answerp[0].OUTPUTSELECT
+option => answerp[1].OUTPUTSELECT
+option => answerp[2].OUTPUTSELECT
+option => answerp[3].OUTPUTSELECT
+option => cout_a.LATCH_ENABLE
+answer[0] <= answerp[0].DB_MAX_OUTPUT_PORT_TYPE
+answer[1] <= answerp[1].DB_MAX_OUTPUT_PORT_TYPE
+answer[2] <= answerp[2].DB_MAX_OUTPUT_PORT_TYPE
+answer[3] <= answerp[3].DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout_a.DB_MAX_OUTPUT_PORT_TYPE
+neg <= neg_a.DB_MAX_OUTPUT_PORT_TYPE
+zero <= resultado:U2.zero_a
+overflow <= resultado:U2.over_a
+display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_adder:U0
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+answer[0] <= n_bit_adder_sub:U0.answer
+answer[1] <= n_bit_adder_sub:U0.answer
+answer[2] <= n_bit_adder_sub:U0.answer
+answer[3] <= n_bit_adder_sub:U0.answer
+cout <= n_bit_adder_sub:U0.cout
+
+
+|alu|arith_alu:AUR|n_bit_adder:U0|n_bit_adder_sub:U0
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+cin => cin.IN1
+answer[0] <= full_adder:generate_N_bit_Adder[0].f.port3
+answer[1] <= full_adder:generate_N_bit_Adder[1].f.port3
+answer[2] <= full_adder:generate_N_bit_Adder[2].f.port3
+answer[3] <= full_adder:generate_N_bit_Adder[3].f.port3
+cout <= full_adder:generate_N_bit_Adder[3].f.port4
+
+
+|alu|arith_alu:AUR|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[0].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[1].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[2].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_adder:U0|n_bit_adder_sub:U0|full_adder:generate_N_bit_Adder[3].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+answer[0] <= n_bit_adder_sub:U1.answer
+answer[1] <= n_bit_adder_sub:U1.answer
+answer[2] <= n_bit_adder_sub:U1.answer
+answer[3] <= n_bit_adder_sub:U1.answer
+neg <= n_bit_compare:U0.smaller
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1|n_bit_compare:U0
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+smaller <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1|n_bit_adder_sub:U1
+input1[0] => input1[0].IN1
+input1[1] => input1[1].IN1
+input1[2] => input1[2].IN1
+input1[3] => input1[3].IN1
+input2[0] => input2[0].IN1
+input2[1] => input2[1].IN1
+input2[2] => input2[2].IN1
+input2[3] => input2[3].IN1
+cin => cin.IN1
+answer[0] <= full_adder:generate_N_bit_Adder[0].f.port3
+answer[1] <= full_adder:generate_N_bit_Adder[1].f.port3
+answer[2] <= full_adder:generate_N_bit_Adder[2].f.port3
+answer[3] <= full_adder:generate_N_bit_Adder[3].f.port3
+cout <= full_adder:generate_N_bit_Adder[3].f.port4
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[0].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[1].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[2].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|n_bit_substractor:U1|n_bit_adder_sub:U1|full_adder:generate_N_bit_Adder[3].f
+x => s.IN0
+x => c_out.IN0
+x => c_out.IN0
+y => s.IN1
+y => c_out.IN0
+y => c_out.IN1
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|resultado:U2
+answerp[0] => n_bit_compare:U2.a[0]
+answerp[0] => n_bit_compare:U3.b[0]
+answerp[1] => n_bit_compare:U2.a[1]
+answerp[1] => n_bit_compare:U3.b[1]
+answerp[2] => n_bit_compare:U2.a[2]
+answerp[2] => n_bit_compare:U3.b[2]
+answerp[3] => n_bit_compare:U2.a[3]
+answerp[3] => n_bit_compare:U3.b[3]
+cout => zero_b.OUTPUTSELECT
+cout => over_b.OUTPUTSELECT
+zero_a <= zero_b.DB_MAX_OUTPUT_PORT_TYPE
+over_a <= over_b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|resultado:U2|n_bit_compare:U2
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+smaller <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arith_alu:AUR|resultado:U2|n_bit_compare:U3
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+smaller <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
