@@ -1,4 +1,4 @@
-module logic_alu#(parameter N=4)(input [N-1:0] A, B, 
+module logic_alu#(parameter N=4)(input [N-1:0] a, b, 
 											output [N-1:0] r_and, r_or, r_xor, r_shiftR, r_shiftL);
 	
 	and_gate u1(a, b, r_and);
@@ -21,10 +21,10 @@ module xor_gate#(parameter N=4)(input a, b, output r_xor_gate);
 	assign r_xor_gate = a^b;
 endmodule
 
-module shiftR_gate#(parameter N=4)(input a, output r_shiftR_gate);
+module shiftR_gate#(parameter N=4)(input a, b, output r_shiftR_gate);
 	assign r_shiftR_gate = a>>b;
 endmodule
 
-module shiftL_gate#(parameter N=4)(input a, output r_shiftL_gate);
+module shiftL_gate#(parameter N=4)(input a, b, output r_shiftL_gate);
 	assign r_shiftL_gate = a<<b;
 endmodule
