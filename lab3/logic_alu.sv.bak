@@ -1,0 +1,4 @@
+module logic_alu#(parameter N=4)(input [N-1:0] A, B, output [N-1:0] r_and, r_or, r_xor, r_shiftR, r_shiftL);
+	always @* begin 
+	
+endmodule
