@@ -1,9 +1,10 @@
-module alu #(parameter N=4)(input [N-1:0] a, b, input op, output reg[2:0] counter, output [N-1:0] resultado, 
+module alu #(parameter N=4)(input [N-1:0] a, b, input op, output reg[3:0] counter, output [N-1:0] resultado, 
 									 output cout, zero, neg, overflow, output [6:0] display);
 	logic[N:0] rs, rr;
-	reg[N-1:0] r_and, r_or, r_xor, r_shiftR, r_shiftL, resultado_s, resultado_r, resultado_aux;
+	reg[N-1:0] r_and, r_or, r_xor, r_shiftR, r_not, r_shiftL, resultado_s, resultado_r, resultado_aux;
 	
-	
+	logic [N-1:0] shiftR1;
+	logic [N-1:0] shiftR2;
 	logic cout_aux , neg_aux, zero_aux, overflow_aux;
 	logic cout_aux_s, neg_aux_s, zero_aux_s, overflow_aux_s;
 	logic cout_aux_r, neg_aux_r, zero_aux_r, overflow_aux_r;
@@ -14,44 +15,53 @@ module alu #(parameter N=4)(input [N-1:0] a, b, input op, output reg[2:0] counte
 	reg [6:0] disp;
 	
 	logic [N-1:0] aux;
-	logic_alu LU(a, b, r_and, r_or, r_xor, r_shiftR, r_shiftL);
-	arith_alu AUS(a, b, 0, resultado_s, cout_aux_s, neg_aux_s, zero_aux_s, overflow_aux_s);
-	arith_alu AUR(a, b, 1, resultado_r, cout_aux_r, neg_aux_r, zero_aux_r, overflow_aux_r);
+	logic_alu LU(a, b, r_and, r_or, r_xor, r_shiftR, r_shiftL, r_not);
+	arith_alu AUS(a, b, 0, resultado_s, cout_aux_s, neg_aux_s, zero_aux_s, overflow_aux_s, shiftR1);
+	arith_alu AUR(a, b, 1, resultado_r, cout_aux_r, neg_aux_r, zero_aux_r, overflow_aux_r, shiftR2);
 	
 	
 
 	always @(posedge op) begin
 	
-		if (counter < 3'b110) begin
+		if (counter < 4'b1001) begin
 			counter <= counter + 1'b1;
 		end else begin
-			counter <= 3'b000;
+			counter <= 4'b0000;
 		end
 	end
 	
 	always @* begin
 	case (counter)
 	
-		3'b000: // a + b
+		4'b0000: // a + b
 		 resultado_aux = resultado_s;
 		 
-		3'b001: // a - b
+		4'b0001: // a - b
 		 resultado_aux = resultado_r;
 		
-		3'b010:
-			resultado_aux = {3'b000,r_and[0]};
+		4'b0010:
+			resultado_aux = r_and;
 
-		3'b011:
-			resultado_aux = {3'b000,r_or[0]};
+		4'b0011:
+			resultado_aux = r_or;
 
-		3'b100:
-			resultado_aux = {3'b000,r_xor[0]};
+		4'b0100:
+			resultado_aux = r_xor;
 
-		3'b101:
-			resultado_aux = {3'b000,r_shiftR[0]};
+		4'b0101:
+			resultado_aux = r_shiftR;
 
-		3'b110:
-			resultado_aux = {3'b000,r_shiftL[0]};
+		4'b0110:
+			resultado_aux = r_shiftL;
+			
+		4'b0111:
+			resultado_aux = shiftR1;
+			
+		4'b1000:
+			resultado_aux = r_shiftL;
+			
+		4'b1001:
+			resultado_aux = r_not;
 	
 		default: resultado_aux = 4'b0000;
 	endcase

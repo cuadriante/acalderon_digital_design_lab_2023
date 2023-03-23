@@ -4,12 +4,13 @@
 
 
 
-module arith_alu(input1, input2, option, answer, cout, neg, zero, overflow);
+module arith_alu(input1, input2, option, answer, cout, neg, zero, overflow, shiftR);
 	parameter N=4;
 	
 	input [N-1:0] input1, input2;
 	input option;
 	output [N-1:0] answer;
+	output [N-1:0] shiftR;
 	output cout, neg, zero, overflow;
 	
 
@@ -42,6 +43,9 @@ module arith_alu(input1, input2, option, answer, cout, neg, zero, overflow);
 	end
 	
 	resultado U2(.answerp(answerp), .cout(cout_a), .zero_a(zero_a), .over_a(over_a));
+	
+	
+	shiftR_arith U3(.a(input1), .b(input2), .r_shiftR_gate(shiftR));
 	
 	assign answer = answerp;
 	assign cout = cout_a;
@@ -192,4 +196,22 @@ module bit_compare(a, b, equal, greater, smaller);
 	assign smaller = (~a)&b;
 	
 
+endmodule
+
+
+module shiftR_arith#(parameter N=4)(input [N-1:0] a, b, output [N-1:0] r_shiftR_gate);
+    genvar i;
+    assign r_shiftR_gate[N-1] = a[N-1];
+    generate
+    for (i = 0; i < N - 1; i = i + 1) begin: nbit_shiftR
+            //shift sh(a[N-1-i], r_shiftR_gate[N-2-i]);
+            assign r_shiftR_gate[N-2-i] = a[N-1-i];
+     end
+  endgenerate 
+endmodule
+
+
+
+module shift_a#(parameter N=4)(input logic a_i, output logic sh_i);
+    assign sh_i = a_i;
 endmodule
