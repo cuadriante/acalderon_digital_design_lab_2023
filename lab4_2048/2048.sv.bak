@@ -1,0 +1,16 @@
+module 2048 #(parameter N=3)(btnDown, btnUp, btnLeft, btnRight, output [N*N:0] matriz);
+ //NxN grid
+rand int A[N*N];
+
+// check game over
+
+// check win
+
+// reset 
+
+// merge 
+
+// add
+
+
+endmodule 

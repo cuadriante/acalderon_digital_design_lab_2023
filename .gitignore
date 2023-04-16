@@ -26,8 +26,6 @@
 db/decodificador.tiscmp.fastest_slow_1100mv_0c.ddb
 db/decodificador.tiscmp.fastest_slow_1100mv_85c.ddb
 *.ddb
-*.qpf
-*.qsf
 *.db_info
 *.ammdb
 *.cdb
