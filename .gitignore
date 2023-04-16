@@ -61,3 +61,7 @@ incremental_db/README
 *.sof
 *.sft
 *.vo
+lab_02/p01/problema1.qpf
+lab3/alu.qpf
+lab3/alu.qsf
+lab_02/p01/problema1.qsf
