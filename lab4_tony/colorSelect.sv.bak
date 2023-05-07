@@ -1,0 +1,81 @@
+module colorSelect(input logic vlineas, input logic cuadrados_enable[15:0],input logic win, input logic lose, input int arrayin[15:0], output logic [7:0] r,g,b);
+
+	
+
+	always @(vlineas or win or lose or cuadrados_enable[0] or cuadrados_enable[1] or cuadrados_enable[2]
+	or cuadrados_enable[3] or cuadrados_enable[4] or cuadrados_enable[5] or cuadrados_enable[6]
+	or cuadrados_enable[7] or cuadrados_enable[8] or cuadrados_enable[9] or cuadrados_enable[10] 
+	or cuadrados_enable[11] or cuadrados_enable[12] or cuadrados_enable[13] or cuadrados_enable[14]
+	or cuadrados_enable[15]) begin
+		
+		
+		
+	
+	
+		
+		
+		case({vlineas,win,lose})
+		
+			3'b000 : out_mux <= 24'b000000000000000000000000;
+			3'b100 : out_mux <= 24'b111111111111111111111111;
+			3'b110 : out_mux <= 24'b000000001111111100000000;
+			3'b101 : out_mux <= 24'b111111110000000000000000;
+			
+			default  : out_mux <= 24'b000000000000000000000000;
+		endcase
+		
+		
+		for (int i = 0; i<15; i = i+1) begin
+			
+			if ((cuadrados_enable[i]) && (arrayin[i] == 0)) begin
+				
+				out_mux <= 24'b000000000000000000000000;
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 0)) begin
+				
+				out_mux <= 24'b111011101111111100010110;
+				
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 2)) begin
+				out_mux <= 24'b111100011011010000010011;
+				
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 4)) begin
+				out_mux <= 24'b111100010011010100010011;
+			
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 8)) begin
+				out_mux <= 24'b111100010011010100010011;
+			
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 16)) begin
+				out_mux <= 24'b000100111111000111110001;
+				
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 32)) begin
+				out_mux <= 24'b000100111111000111110001;
+			
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 64)) begin
+				out_mux <= 24'b000100111111000111110001;
+			
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 128)) begin
+				out_mux <= 24'b 000100111000001011110001;
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 256)) begin
+				out_mux <= 24'b 000100111000001011110001;
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 512)) begin
+				out_mux <= 24'b011111010010011010101111;
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 1024)) begin
+				out_mux <= 24'b110010000100100010110111;
+			end else if ((cuadrados_enable[i]) && (arrayin[i] == 2048)) begin
+				out_mux <= 24'b111111110000000011001101;
+			end else begin
+				out_mux <= 24'b000000000000000000000000;
+			end
+		
+		end
+		
+	end
+
+	
+	
+	assign r = out_mux[23:16];
+		
+	assign g = out_mux[15:8];
+		
+	assign b = out_mux[7:0];
+
+endmodule

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/simulation/modelsim
 vlpm_abs
-Z1 !s110 1682593121
+Z1 !s110 1683421656
 !i10b 1
 !s100 O9i<YS?ECZC8XU2m2T>HQ0
 IhbiMHN4OjboRhC3:=TQli2
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1682593121.000000
+Z7 !s108 1683421656.000000
 Z8 !s107 d:/quartuslite/quartus/eda/sim_lib/220model.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|lpm_ver|d:/quartuslite/quartus/eda/sim_lib/220model.v|
 !i113 1

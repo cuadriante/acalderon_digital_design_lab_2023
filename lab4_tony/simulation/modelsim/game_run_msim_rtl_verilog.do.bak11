@@ -46,6 +46,13 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv}
 
 vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv}
 

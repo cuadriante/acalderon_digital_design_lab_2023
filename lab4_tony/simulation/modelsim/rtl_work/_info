@@ -8,128 +8,382 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/simulation/modelsim
-vgame
+vcolor_cuadrado
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1682593135
+Z2 !s110 1683421672
 !i10b 1
-!s100 efYbgSDHcnA394V>IOGOm0
-ICW0o`Hif>YRY7Ml6R<D_72
+!s100 TAm;C5A6z9Lm=Y`WQzYQ<0
+IkoCg9LedSLTKH_dEK8P_l3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 !s105 game_sv_unit
+!s105 color_cuadrado_sv_unit
 S1
 R0
-Z5 w1682593092
-Z6 8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv
-Z7 FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv
-L0 3
-Z8 OV;L;10.5b;63
+w1683414536
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv
+L0 1
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1682593135.000000
-Z10 !s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv|
-Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv|
+Z5 !s108 1683421672.000000
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv|
 !i113 1
-Z12 o-sv -work work
-Z13 !s92 -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony
-Z14 tCvgOpt 0
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony
+Z8 tCvgOpt 0
+vcolorSelect
+R1
+R2
+!i10b 1
+!s100 kY8A]o8H4dOb0K6EB0a5L2
+I4I0oDGR@YIR`Mhk;j8;Nh2
+R3
+!s105 colorSelect_sv_unit
+S1
+R0
+w1683420708
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv|
+!i113 1
+R6
+R7
+R8
+ncolor@select
+vcontadorXY
+R1
+R2
+!i10b 1
+!s100 eDdShdo6[<3A^Q=PdW55e3
+IXzUbaVaN^H?<7DoaMfXKG2
+R3
+!s105 contadorXY_sv_unit
+S1
+R0
+w1683265570
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv|
+!i113 1
+R6
+R7
+R8
+ncontador@x@y
+vcontroladorVGA
+R1
+R2
+!i10b 1
+!s100 YPA?Qj<KSVM:R5z`93OYm0
+ITc`3E=YZjfRJL:?]=BJ@=0
+R3
+!s105 controladorVGA_sv_unit
+S1
+R0
+w1683265539
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv|
+!i113 1
+R6
+R7
+R8
+ncontrolador@v@g@a
+vcuadrados
+R1
+R2
+!i10b 1
+!s100 98A2h`KTEA^LBSc;Mz:3D2
+I?dbeN`OS>dNGULG]=ZP0E1
+R3
+!s105 cuadrados_sv_unit
+S1
+R0
+w1683412251
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv|
+!i113 1
+R6
+R7
+R8
+vdisplay_interface
+R1
+R2
+!i10b 1
+!s100 ^c6c_3WYG]VcBMaDGZ=[M2
+IhMAWnm12:bO<a9lz;QEa:3
+R3
+Z9 !s105 game_sv_unit
+S1
+R0
+Z10 w1683412278
+Z11 8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv
+Z12 FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv
+L0 579
+R4
+r1
+!s85 0
+31
+R5
+Z13 !s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv|
+!i113 1
+R6
+R7
+R8
+vdivisorClock
+R1
+R2
+!i10b 1
+!s100 VGdGl6jJLhk@neW:4?=U51
+IfIm27MDd1fQ`>UEzBenfE1
+R3
+!s105 divisorClock_sv_unit
+S1
+R0
+w1683265529
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv|
+!i113 1
+R6
+R7
+R8
+ndivisor@clock
+vgame
+R1
+R2
+!i10b 1
+!s100 Ia3<=XjWgKBhge=ERD@eh1
+IBE0A]Kb=<VQMR`K:G5_P63
+R3
+R9
+S1
+R0
+R10
+R11
+R12
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R13
+R14
+!i113 1
+R6
+R7
+R8
 vgame_manager
 R1
 R2
 !i10b 1
-!s100 b:d7HS7WSNO8bZCj]oe^N0
-I>a]JT66Y::?zXzgo3Q9Tb1
+!s100 SQmOB2AI?dG2FVczL`jLW2
+ILVXQ8[LZdSe[QPM]_:g?d3
 R3
-R4
+R9
 S1
 R0
-R5
-R6
-R7
-L0 237
-R8
+R10
+R11
+R12
+L0 376
+R4
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 1
-R12
+R5
 R13
 R14
+!i113 1
+R6
+R7
+R8
 vgame_tb
 R1
 R2
 !i10b 1
-!s100 XkZYGh[eB[m=W[>]=A48A0
-I9?GU59^>66b]c<0=3b0Bz0
+!s100 4ZWL4]OJXNjflInbW9gb32
+I77PO<kGd0XWJN=ELZK[=32
 R3
 !s105 game_tb_sv_unit
 S1
 R0
-w1682590229
+w1683416630
 8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv
 FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv
 L0 1
-R8
+R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv|
 !i113 1
-R12
-R13
-R14
+R6
+R7
+R8
 vlimit_checker
 R1
 R2
 !i10b 1
-!s100 l4ZLA`azL_6le4:>jGl=I3
-I;bM`h`a`cP`7DVzU`Y_a03
+!s100 0CWz@cKf>n?7GjK0n7>]F1
+I=C60UBXkm[beAn99Y05QL1
 R3
-R4
+R9
 S1
 R0
-R5
-R6
-R7
-L0 217
-R8
+R10
+R11
+R12
+L0 340
+R4
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 1
-R12
+R5
 R13
 R14
+!i113 1
+R6
+R7
+R8
+vlineas
+R1
+R2
+!i10b 1
+!s100 fWIae_0S@HV]Z6D3HPojU1
+I@94AY:3I@1K_:`LJ>aFWG0
+R3
+!s105 lineas_sv_unit
+S1
+R0
+w1683418212
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv|
+!i113 1
+R6
+R7
+R8
 vloss_condition
 R1
 R2
 !i10b 1
-!s100 `VSR[>0>X2iNfaT4;[]@X2
-I[oM0M=1VIHeh3hTEWiOMk2
+!s100 44Uoa;fHkD;2Q^LSTJRU60
+IBIg62MdVA`LMJW412G0Uz3
 R3
-R4
+R9
 S1
 R0
-R5
-R6
-R7
-L0 183
-R8
+R10
+R11
+R12
+L0 279
+R4
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 1
-R12
+R5
 R13
 R14
+!i113 1
+R6
+R7
+R8
+vnew_nums_assign
+R1
+R2
+!i10b 1
+!s100 Q5m89ZWLC6HN;]TK4U5GZ3
+IWP3L?1o^HBM4B_RHEafnS2
+R3
+R9
+S1
+R0
+R10
+R11
+R12
+L0 314
+R4
+r1
+!s85 0
+31
+R5
+R13
+R14
+!i113 1
+R6
+R7
+R8
+vvideocontroller
+R1
+R2
+!i10b 1
+!s100 jSToLE_Qj>3mi7JgDz2?k0
+ImYB93I:VOUU>Z>9Yzj7G?1
+R3
+!s105 videocontroller_sv_unit
+S1
+R0
+w1683420001
+8C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv
+FC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv|
+!i113 1
+R6
+R7
+R8
