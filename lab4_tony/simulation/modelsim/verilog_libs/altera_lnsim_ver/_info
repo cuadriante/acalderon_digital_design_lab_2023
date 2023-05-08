@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/simulation/modelsim
 valtera_arriav_pll
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1683421659
+Z2 !s110 1683443976
 !i10b 1
 !s100 =P7CDUZSG9W8kBfd_h_CR2
 I]fCE<?d<2ClJioHF]9U0Z1
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1683421658.000000
+Z9 !s108 1683443976.000000
 Z10 !s107 d:/quartuslite/quartus/eda/sim_lib/altera_lnsim.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|altera_lnsim_ver|d:/quartuslite/quartus/eda/sim_lib/altera_lnsim.sv|
 !i113 1

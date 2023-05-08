@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/simulation/modelsim
 vcolor_cuadrado
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1683421672
+Z2 !s110 1683443988
 !i10b 1
 !s100 TAm;C5A6z9Lm=Y`WQzYQ<0
 IkoCg9LedSLTKH_dEK8P_l3
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1683421672.000000
+Z5 !s108 1683443988.000000
 !s107 C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony|C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv|
 !i113 1

@@ -53,6 +53,7 @@ vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_de
 vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv}
 vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv}
 vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv}
+vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv}
 
 vlog -sv -work work +incdir+C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony {C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv}
 

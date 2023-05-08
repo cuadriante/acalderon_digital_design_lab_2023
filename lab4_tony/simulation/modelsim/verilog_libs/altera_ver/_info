@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/simulation/modelsim
 valt_bidir_buf
-Z1 !s110 1683421655
+Z1 !s110 1683443973
 !i10b 1
 !s100 `k9N_NNE[omlCfHHm=PO53
 In13gT<NH<J`Pni07a=RiL3
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1683421655.000000
+Z7 !s108 1683443972.000000
 Z8 !s107 d:/quartuslite/quartus/eda/sim_lib/altera_primitives.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_ver|d:/quartuslite/quartus/eda/sim_lib/altera_primitives.v|
 !i113 1
