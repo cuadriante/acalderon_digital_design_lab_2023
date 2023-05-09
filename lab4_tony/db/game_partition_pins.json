@@ -1,0 +1,281 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "victoria",
+					"strict" : false
+				},
+				{
+					"name" : "stateout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stateout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stateout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_25",
+					"strict" : false
+				},
+				{
+					"name" : "H_SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "V_SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "SYNC_B",
+					"strict" : false
+				},
+				{
+					"name" : "SYNC_BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "pushbutts[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pushbutts[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pushbutts[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pushbutts[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_monitor",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

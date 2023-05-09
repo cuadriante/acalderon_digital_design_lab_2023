@@ -1,0 +1,10 @@
+
+
+module cuadrados(input logic [9:0]cuentaX,cuentaY, input int Xlim[1:0], input int ylim[1:0],
+				  output logic enable);
+				  
+		assign enable = (((cuentaX > xlim[0]) & (cuentaX < xlim[1]))&
+								((cuentaY > ylim[0]) & (cuentaY < ylim[1])))? 1:0;
+
+
+endmodule

@@ -1,0 +1,1791 @@
+Analysis & Synthesis report for game
+Sun May  7 22:54:17 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |game|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "videocontroller:VC|cuadrados:c15"
+ 14. Port Connectivity Checks: "videocontroller:VC|cuadrados:c14"
+ 15. Port Connectivity Checks: "videocontroller:VC|cuadrados:c13"
+ 16. Port Connectivity Checks: "videocontroller:VC|cuadrados:c12"
+ 17. Port Connectivity Checks: "videocontroller:VC|cuadrados:c11"
+ 18. Port Connectivity Checks: "videocontroller:VC|cuadrados:c10"
+ 19. Port Connectivity Checks: "videocontroller:VC|cuadrados:c9"
+ 20. Port Connectivity Checks: "videocontroller:VC|cuadrados:c8"
+ 21. Port Connectivity Checks: "videocontroller:VC|cuadrados:c7"
+ 22. Port Connectivity Checks: "videocontroller:VC|cuadrados:c6"
+ 23. Port Connectivity Checks: "videocontroller:VC|cuadrados:c5"
+ 24. Port Connectivity Checks: "videocontroller:VC|cuadrados:c4"
+ 25. Port Connectivity Checks: "videocontroller:VC|cuadrados:c3"
+ 26. Port Connectivity Checks: "videocontroller:VC|cuadrados:c2"
+ 27. Port Connectivity Checks: "videocontroller:VC|cuadrados:c1"
+ 28. Port Connectivity Checks: "videocontroller:VC|cuadrados:c0"
+ 29. Port Connectivity Checks: "display_interface:D3"
+ 30. Port Connectivity Checks: "display_interface:D2"
+ 31. Port Connectivity Checks: "display_interface:D1"
+ 32. Port Connectivity Checks: "display_interface:D0"
+ 33. Port Connectivity Checks: "limit_checker:U1"
+ 34. Port Connectivity Checks: "game_manager:U0"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun May  7 22:54:17 2023          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; game                                           ;
+; Top-level Entity Name           ; game                                           ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 464                                            ;
+; Total pins                      ; 77                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; game               ; game               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; On                 ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.68        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  64.3%      ;
+;     Processor 3            ;   1.7%      ;
+;     Processor 4            ;   1.6%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; game.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv            ;         ;
+; divisorClock.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv    ;         ;
+; controladorVGA.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv  ;         ;
+; contadorXY.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv      ;         ;
+; lineas.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv          ;         ;
+; cuadrados.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv       ;         ;
+; videocontroller.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv ;         ;
+; colorSelect.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv     ;         ;
+; color_cuadrado.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 7546                      ;
+;                                             ;                           ;
+; Combinational ALUT usage for logic          ; 10303                     ;
+;     -- 7 input functions                    ; 137                       ;
+;     -- 6 input functions                    ; 4651                      ;
+;     -- 5 input functions                    ; 1974                      ;
+;     -- 4 input functions                    ; 1707                      ;
+;     -- <=3 input functions                  ; 1834                      ;
+;                                             ;                           ;
+; Dedicated logic registers                   ; 464                       ;
+;                                             ;                           ;
+; I/O pins                                    ; 77                        ;
+;                                             ;                           ;
+; Total DSP Blocks                            ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; game_manager:U0|Equal14~0 ;
+; Maximum fan-out                             ; 854                       ;
+; Total fan-out                               ; 51992                     ;
+; Average fan-out                             ; 4.76                      ;
++---------------------------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name       ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+; |game                         ; 10303 (391)         ; 464 (182)                 ; 0                 ; 0          ; 77   ; 0            ; |game                                                      ; game              ; work         ;
+;    |controladorVGA:CNTVGA|    ; 32 (7)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |game|controladorVGA:CNTVGA                                ; controladorVGA    ; work         ;
+;       |contadorXY:CXY|        ; 25 (25)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |game|controladorVGA:CNTVGA|contadorXY:CXY                 ; contadorXY        ; work         ;
+;    |display_interface:D0|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|display_interface:D0                                 ; display_interface ; work         ;
+;    |display_interface:D1|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|display_interface:D1                                 ; display_interface ; work         ;
+;    |display_interface:D2|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|display_interface:D2                                 ; display_interface ; work         ;
+;    |display_interface:D3|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|display_interface:D3                                 ; display_interface ; work         ;
+;    |divisorClock:DV|          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |game|divisorClock:DV                                      ; divisorClock      ; work         ;
+;    |game_manager:U0|          ; 8789 (8789)         ; 254 (254)                 ; 0                 ; 0          ; 0    ; 0            ; |game|game_manager:U0                                      ; game_manager      ; work         ;
+;    |limit_checker:U1|         ; 20 (20)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |game|limit_checker:U1                                     ; limit_checker     ; work         ;
+;    |loss_condition:U2|        ; 79 (79)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |game|loss_condition:U2                                    ; loss_condition    ; work         ;
+;    |new_nums_assign:U3|       ; 57 (57)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |game|new_nums_assign:U3                                   ; new_nums_assign   ; work         ;
+;    |videocontroller:VC|       ; 910 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC                                   ; videocontroller   ; work         ;
+;       |colorSelect:cl|        ; 863 (546)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl                    ; colorSelect       ; work         ;
+;          |color_cuadrado:c0|  ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c0  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c10| ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c10 ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c11| ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c11 ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c12| ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c12 ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c13| ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c13 ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c14| ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c14 ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c15| ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c15 ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c1|  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c1  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c2|  ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c2  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c3|  ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c3  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c4|  ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c4  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c5|  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c5  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c6|  ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c6  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c7|  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c7  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c8|  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c8  ; color_cuadrado    ; work         ;
+;          |color_cuadrado:c9|  ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c9  ; color_cuadrado    ; work         ;
+;       |cuadrados:c0|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c0                      ; cuadrados         ; work         ;
+;       |cuadrados:c11|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c11                     ; cuadrados         ; work         ;
+;       |cuadrados:c12|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c12                     ; cuadrados         ; work         ;
+;       |cuadrados:c13|         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c13                     ; cuadrados         ; work         ;
+;       |cuadrados:c14|         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c14                     ; cuadrados         ; work         ;
+;       |cuadrados:c15|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c15                     ; cuadrados         ; work         ;
+;       |cuadrados:c1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c1                      ; cuadrados         ; work         ;
+;       |cuadrados:c2|          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c2                      ; cuadrados         ; work         ;
+;       |cuadrados:c3|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c3                      ; cuadrados         ; work         ;
+;       |cuadrados:c4|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c4                      ; cuadrados         ; work         ;
+;       |cuadrados:c7|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c7                      ; cuadrados         ; work         ;
+;       |cuadrados:c8|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|cuadrados:c8                      ; cuadrados         ; work         ;
+;       |lineas:ln|             ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |game|videocontroller:VC|lineas:ln                         ; lineas            ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |game|state                                                                   ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; state.110 ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; state.001 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; state.010 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; state.011 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; state.100 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; state.101 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; state.110 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++-----------------------------------------+------------------------------------------+
+; Register name                           ; Reason for Removal                       ;
++-----------------------------------------+------------------------------------------+
+; array[10][21]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][20]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][19]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][18]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][17]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][16]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][15]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][14]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][13]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][12]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][0]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[9][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[8][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[8][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[7][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[7][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[6][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[6][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[5][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[5][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[4][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[4][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[3][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[3][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[2][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[2][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[1][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[1][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[0][31]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][30]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][29]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][28]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][27]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][26]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][25]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][24]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][23]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][22]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][21]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][20]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][19]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][18]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][17]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][16]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][15]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][14]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][13]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][12]                            ; Stuck at GND due to stuck port data_in   ;
+; array[0][0]                             ; Stuck at GND due to stuck port data_in   ;
+; array[10][22]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][23]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][24]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][25]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][26]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][27]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][28]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][29]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][30]                           ; Stuck at GND due to stuck port data_in   ;
+; array[10][31]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][0]                            ; Stuck at GND due to stuck port data_in   ;
+; array[11][12]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][13]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][14]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][15]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][16]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][17]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][18]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][19]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][20]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][21]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][22]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][23]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][24]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][25]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][26]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][27]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][28]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][29]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][30]                           ; Stuck at GND due to stuck port data_in   ;
+; array[11][31]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][0]                            ; Stuck at GND due to stuck port data_in   ;
+; array[12][12]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][13]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][14]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][15]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][16]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][17]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][18]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][19]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][20]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][21]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][22]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][23]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][24]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][25]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][26]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][27]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][28]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][29]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][30]                           ; Stuck at GND due to stuck port data_in   ;
+; array[12][31]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][0]                            ; Stuck at GND due to stuck port data_in   ;
+; array[13][12]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][13]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][14]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][15]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][16]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][17]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][18]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][19]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][20]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][21]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][22]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][23]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][24]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][25]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][26]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][27]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][28]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][29]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][30]                           ; Stuck at GND due to stuck port data_in   ;
+; array[13][31]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][0]                            ; Stuck at GND due to stuck port data_in   ;
+; array[14][12]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][13]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][14]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][15]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][16]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][17]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][18]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][19]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][20]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][21]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][22]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][23]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][24]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][25]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][26]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][27]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][28]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][29]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][30]                           ; Stuck at GND due to stuck port data_in   ;
+; array[14][31]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][0]                            ; Stuck at GND due to stuck port data_in   ;
+; array[15][12]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][13]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][14]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][15]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][16]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][17]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][18]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][19]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][20]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][21]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][22]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][23]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][24]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][25]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][26]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][27]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][28]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][29]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][30]                           ; Stuck at GND due to stuck port data_in   ;
+; array[15][31]                           ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][31]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][30]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][29]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][28]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][27]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][26]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][25]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][24]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][23]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][22]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][21]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][20]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][19]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][18]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][17]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][16]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][15]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][14]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][13]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[15][0]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][31]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][30]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][29]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][28]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][27]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][26]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][25]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][24]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][23]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][22]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][21]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][20]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][19]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][18]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][17]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][16]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][15]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][14]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][13]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[14][0]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][31]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][30]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][29]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][28]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][27]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][26]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][25]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][24]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][23]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][22]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][21]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][20]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][19]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][18]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][17]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][16]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][15]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][14]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][13]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[13][0]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][31]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][30]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][29]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][28]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][27]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][26]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][25]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][24]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][23]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][22]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][21]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][20]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][19]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][18]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][17]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][16]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][15]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][14]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][13]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[12][0]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][31]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][30]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][29]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][28]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][27]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][26]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][25]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][24]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][23]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][22]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][21]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][20]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][19]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][18]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][17]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][16]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][15]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][14]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][13]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[11][0]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][31]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][30]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][29]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][28]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][27]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][26]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][25]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][24]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][23]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][22]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][21]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][20]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][19]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][18]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][17]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][16]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][15]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][14]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][13]       ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[10][0]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[9][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[8][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[7][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[6][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[5][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[4][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[3][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[2][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[1][0]         ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][31]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][30]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][29]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][28]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][27]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][26]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][25]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][24]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][23]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][22]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][21]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][20]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][19]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][18]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][17]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][16]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][15]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][14]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][13]        ; Stuck at GND due to stuck port data_in   ;
+; game_manager:U0|arraywork[0][0]         ; Stuck at GND due to stuck port data_in   ;
+; new_nums_assign:U3|i_new[2..9,11..31]   ; Merged with new_nums_assign:U3|i_new[10] ;
+; new_nums_assign:U3|j_new[2..31]         ; Merged with new_nums_assign:U3|i_new[10] ;
+; new_nums_assign:U3|i_new[10]            ; Stuck at GND due to stuck port data_in   ;
+; state~4                                 ; Lost fanout                              ;
+; state~5                                 ; Lost fanout                              ;
+; state~6                                 ; Lost fanout                              ;
+; state.101                               ; Stuck at GND due to stuck port data_in   ;
+; Total Number of Removed Registers = 720 ;                                          ;
++-----------------------------------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                           ;
++----------------------------------+---------------------------+----------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register ;
++----------------------------------+---------------------------+----------------------------------------+
+; game_manager:U0|arraywork[7][31] ; Stuck at GND              ; new_nums_assign:U3|i_new[10]           ;
+;                                  ; due to stuck port data_in ;                                        ;
++----------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 464   ;
+; Number of registers using Synchronous Clear  ; 60    ;
+; Number of registers using Synchronous Load   ; 112   ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[11][9]                                 ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[7][7]                                  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[3][6]                                  ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[10][3]                                 ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[6][10]                                 ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[2][9]                                  ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |game|game_manager:U0|arraywork[9][2]                                  ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |game|game_manager:U0|arraywork[5][2]                                  ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |game|game_manager:U0|arraywork[1][10]                                 ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[8][2]                                  ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[4][3]                                  ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[0][11]                                 ;
+; 33:1               ; 10 bits   ; 220 LEs       ; 200 LEs              ; 20 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[12][2]                                 ;
+; 33:1               ; 10 bits   ; 220 LEs       ; 190 LEs              ; 30 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[15][3]                                 ;
+; 34:1               ; 10 bits   ; 220 LEs       ; 200 LEs              ; 20 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[14][3]                                 ;
+; 34:1               ; 10 bits   ; 220 LEs       ; 200 LEs              ; 20 LEs                 ; Yes        ; |game|game_manager:U0|arraywork[13][7]                                 ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|array                                            ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|array                                            ;
+; 5:1                ; 928 bits  ; 2784 LEs      ; 2784 LEs             ; 0 LEs                  ; No         ; |game|game_manager:U0|last_i                                           ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_i                                           ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |game|game_manager:U0|last_j                                           ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 19:1               ; 10 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 22:1               ; 10 bits   ; 140 LEs       ; 130 LEs              ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 22:1               ; 10 bits   ; 140 LEs       ; 140 LEs              ; 0 LEs                  ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 23:1               ; 10 bits   ; 150 LEs       ; 140 LEs              ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 23:1               ; 10 bits   ; 150 LEs       ; 140 LEs              ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 24:1               ; 10 bits   ; 160 LEs       ; 150 LEs              ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 25:1               ; 10 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 25:1               ; 10 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 28:1               ; 10 bits   ; 180 LEs       ; 170 LEs              ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 30:1               ; 10 bits   ; 200 LEs       ; 190 LEs              ; 10 LEs                 ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 31:1               ; 10 bits   ; 200 LEs       ; 200 LEs              ; 0 LEs                  ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 31:1               ; 10 bits   ; 200 LEs       ; 200 LEs              ; 0 LEs                  ; No         ; |game|game_manager:U0|arraywork                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c0|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c1|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c2|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c3|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c4|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c5|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c6|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c7|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c8|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c9|out_mux      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c10|out_mux     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c11|out_mux     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c12|out_mux     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c13|out_mux     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c14|out_mux     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c15|out_mux     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c0|out_mux[19]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c1|out_mux[19]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c2|out_mux[19]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c3|out_mux[19]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c4|out_mux[18]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c5|out_mux[18]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c6|out_mux[18]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c7|out_mux[19]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c8|out_mux[18]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c9|out_mux[18]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c10|out_mux[19] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c11|out_mux[19] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c12|out_mux[19] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c13|out_mux[19] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c14|out_mux[19] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c15|out_mux[19] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c0|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c1|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c2|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c3|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c4|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c5|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c6|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c7|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c8|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c9|out_mux      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c10|out_mux     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c11|out_mux     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c12|out_mux     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c13|out_mux     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c14|out_mux     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|color_cuadrado:c15|out_mux     ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector5                      ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector17                     ;
+; 50:1               ; 2 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector15                     ;
+; 82:1               ; 2 bits    ; 108 LEs       ; 108 LEs              ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector1                      ;
+; 82:1               ; 2 bits    ; 108 LEs       ; 108 LEs              ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector16                     ;
+; 130:1              ; 4 bits    ; 344 LEs       ; 344 LEs              ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector9                      ;
+; 162:1              ; 3 bits    ; 324 LEs       ; 324 LEs              ; 0 LEs                  ; No         ; |game|videocontroller:VC|colorSelect:cl|Selector18                     ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 50 LEs               ; 5 LEs                  ; Yes        ; |game|new_nums_assign:U3|i_new[10]                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c15" ;
++---------------+-------+----------+---------------------------+
+; Port          ; Type  ; Severity ; Details                   ;
++---------------+-------+----------+---------------------------+
+; xlim0[8..1]   ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[31..9]  ; Input ; Info     ; Stuck at GND              ;
+; xlim0[0]      ; Input ; Info     ; Stuck at GND              ;
+; xlim1[31..10] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6..0]   ; Input ; Info     ; Stuck at GND              ;
+; xlim1[9]      ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[8]      ; Input ; Info     ; Stuck at GND              ;
+; xlim1[7]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[6..4]   ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[31..9]  ; Input ; Info     ; Stuck at GND              ;
+; ylim0[3..2]   ; Input ; Info     ; Stuck at GND              ;
+; ylim0[8]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[7]      ; Input ; Info     ; Stuck at GND              ;
+; ylim0[1]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]      ; Input ; Info     ; Stuck at GND              ;
+; ylim1[8..5]   ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..9]  ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..0]   ; Input ; Info     ; Stuck at GND              ;
++---------------+-------+----------+---------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c14" ;
++--------------+-------+----------+----------------------------+
+; Port         ; Type  ; Severity ; Details                    ;
++--------------+-------+----------+----------------------------+
+; xlim0[31..9] ; Input ; Info     ; Stuck at GND               ;
+; xlim0[1..0]  ; Input ; Info     ; Stuck at GND               ;
+; xlim0[8]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[7]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[6]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[5]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[4]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[3]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[2]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[8..5]  ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; xlim1[4]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[3]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[2]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[1]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[6..4]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim0[3..2]  ; Input ; Info     ; Stuck at GND               ;
+; ylim0[8]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[7]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim1[8..5]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim1[4..0]  ; Input ; Info     ; Stuck at GND               ;
++--------------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c13" ;
++--------------+-------+----------+----------------------------+
+; Port         ; Type  ; Severity ; Details                    ;
++--------------+-------+----------+----------------------------+
+; xlim0[31..8] ; Input ; Info     ; Stuck at GND               ;
+; xlim0[7]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[6]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[5]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[4]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[3]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[2]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[1]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[0]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; xlim1[5..0]  ; Input ; Info     ; Stuck at GND               ;
+; xlim1[8]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[7]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[6]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[6..4]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim0[3..2]  ; Input ; Info     ; Stuck at GND               ;
+; ylim0[8]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[7]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim1[8..5]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim1[4..0]  ; Input ; Info     ; Stuck at GND               ;
++--------------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c12" ;
++--------------+-------+----------+----------------------------+
+; Port         ; Type  ; Severity ; Details                    ;
++--------------+-------+----------+----------------------------+
+; xlim0        ; Input ; Info     ; Stuck at GND               ;
+; xlim1[2..1]  ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[31..8] ; Input ; Info     ; Stuck at GND               ;
+; xlim1[6..5]  ; Input ; Info     ; Stuck at GND               ;
+; xlim1[7]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[4]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[3]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[6..4]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim0[3..2]  ; Input ; Info     ; Stuck at GND               ;
+; ylim0[8]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[7]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim1[8..5]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim1[4..0]  ; Input ; Info     ; Stuck at GND               ;
++--------------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c11" ;
++---------------+-------+----------+---------------------------+
+; Port          ; Type  ; Severity ; Details                   ;
++---------------+-------+----------+---------------------------+
+; xlim0[8..1]   ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[31..9]  ; Input ; Info     ; Stuck at GND              ;
+; xlim0[0]      ; Input ; Info     ; Stuck at GND              ;
+; xlim1[31..10] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6..0]   ; Input ; Info     ; Stuck at GND              ;
+; xlim1[9]      ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[8]      ; Input ; Info     ; Stuck at GND              ;
+; xlim1[7]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[7..3]   ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[31..8]  ; Input ; Info     ; Stuck at GND              ;
+; ylim0[2]      ; Input ; Info     ; Stuck at GND              ;
+; ylim0[1]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]      ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..1]   ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..9]  ; Input ; Info     ; Stuck at GND              ;
+; ylim1[8]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[7]      ; Input ; Info     ; Stuck at GND              ;
+; ylim1[6]      ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[5]      ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]      ; Input ; Info     ; Stuck at GND              ;
++---------------+-------+----------+---------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c10" ;
++--------------+-------+----------+----------------------------+
+; Port         ; Type  ; Severity ; Details                    ;
++--------------+-------+----------+----------------------------+
+; xlim0[31..9] ; Input ; Info     ; Stuck at GND               ;
+; xlim0[1..0]  ; Input ; Info     ; Stuck at GND               ;
+; xlim0[8]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[7]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[6]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[5]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[4]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim0[3]     ; Input ; Info     ; Stuck at GND               ;
+; xlim0[2]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[8..5]  ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; xlim1[4]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[3]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[2]     ; Input ; Info     ; Stuck at GND               ;
+; xlim1[1]     ; Input ; Info     ; Stuck at VCC               ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[7..3]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[31..8] ; Input ; Info     ; Stuck at GND               ;
+; ylim0[2]     ; Input ; Info     ; Stuck at GND               ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND               ;
+; ylim1[4..1]  ; Input ; Info     ; Stuck at VCC               ;
+; ylim1[31..9] ; Input ; Info     ; Stuck at GND               ;
+; ylim1[8]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim1[7]     ; Input ; Info     ; Stuck at GND               ;
+; ylim1[6]     ; Input ; Info     ; Stuck at VCC               ;
+; ylim1[5]     ; Input ; Info     ; Stuck at GND               ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND               ;
++--------------+-------+----------+----------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c9" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; xlim0[7]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[6]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[5]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[4]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[3]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[2]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[5..0]  ; Input ; Info     ; Stuck at GND              ;
+; xlim1[8]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[7]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[7..3]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim0[2]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[8]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[7]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[6]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[5]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c8" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0        ; Input ; Info     ; Stuck at GND              ;
+; xlim1[2..1]  ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[31..8] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6..5]  ; Input ; Info     ; Stuck at GND              ;
+; xlim1[7]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[4]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[3]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0[7..3]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim0[2]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[8]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[7]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[6]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[5]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c7" ;
++---------------+-------+----------+--------------------------+
+; Port          ; Type  ; Severity ; Details                  ;
++---------------+-------+----------+--------------------------+
+; xlim0[8..1]   ; Input ; Info     ; Stuck at VCC             ;
+; xlim0[31..9]  ; Input ; Info     ; Stuck at GND             ;
+; xlim0[0]      ; Input ; Info     ; Stuck at GND             ;
+; xlim1[31..10] ; Input ; Info     ; Stuck at GND             ;
+; xlim1[6..0]   ; Input ; Info     ; Stuck at GND             ;
+; xlim1[9]      ; Input ; Info     ; Stuck at VCC             ;
+; xlim1[8]      ; Input ; Info     ; Stuck at GND             ;
+; xlim1[7]      ; Input ; Info     ; Stuck at VCC             ;
+; ylim0[31..8]  ; Input ; Info     ; Stuck at GND             ;
+; ylim0[6..2]   ; Input ; Info     ; Stuck at GND             ;
+; ylim0[7]      ; Input ; Info     ; Stuck at VCC             ;
+; ylim0[1]      ; Input ; Info     ; Stuck at VCC             ;
+; ylim0[0]      ; Input ; Info     ; Stuck at GND             ;
+; ylim1[7..5]   ; Input ; Info     ; Stuck at VCC             ;
+; ylim1[2..1]   ; Input ; Info     ; Stuck at VCC             ;
+; ylim1[31..8]  ; Input ; Info     ; Stuck at GND             ;
+; ylim1[4..3]   ; Input ; Info     ; Stuck at GND             ;
+; ylim1[0]      ; Input ; Info     ; Stuck at GND             ;
++---------------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c6" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim0[1..0]  ; Input ; Info     ; Stuck at GND              ;
+; xlim0[8]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[7]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[6]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[5]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[4]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[3]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[2]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[8..5]  ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[4]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[3]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[2]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[1]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim0[6..2]  ; Input ; Info     ; Stuck at GND              ;
+; ylim0[7]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[7..5]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[2..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..3]  ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c5" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; xlim0[7]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[6]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[5]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[4]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[3]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[2]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[5..0]  ; Input ; Info     ; Stuck at GND              ;
+; xlim1[8]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[7]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim0[6..2]  ; Input ; Info     ; Stuck at GND              ;
+; ylim0[7]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[7..5]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[2..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..3]  ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c4" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0        ; Input ; Info     ; Stuck at GND              ;
+; xlim1[2..1]  ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[31..8] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6..5]  ; Input ; Info     ; Stuck at GND              ;
+; xlim1[7]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[4]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[3]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim0[6..2]  ; Input ; Info     ; Stuck at GND              ;
+; ylim0[7]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[7..5]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[2..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..8] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4..3]  ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c3" ;
++---------------+-------+----------+--------------------------+
+; Port          ; Type  ; Severity ; Details                  ;
++---------------+-------+----------+--------------------------+
+; xlim0[8..1]   ; Input ; Info     ; Stuck at VCC             ;
+; xlim0[31..9]  ; Input ; Info     ; Stuck at GND             ;
+; xlim0[0]      ; Input ; Info     ; Stuck at GND             ;
+; xlim1[31..10] ; Input ; Info     ; Stuck at GND             ;
+; xlim1[6..0]   ; Input ; Info     ; Stuck at GND             ;
+; xlim1[9]      ; Input ; Info     ; Stuck at VCC             ;
+; xlim1[8]      ; Input ; Info     ; Stuck at GND             ;
+; xlim1[7]      ; Input ; Info     ; Stuck at VCC             ;
+; ylim0         ; Input ; Info     ; Stuck at GND             ;
+; ylim1[6..5]   ; Input ; Info     ; Stuck at VCC             ;
+; ylim1[3..1]   ; Input ; Info     ; Stuck at VCC             ;
+; ylim1[31..7]  ; Input ; Info     ; Stuck at GND             ;
+; ylim1[4]      ; Input ; Info     ; Stuck at GND             ;
+; ylim1[0]      ; Input ; Info     ; Stuck at GND             ;
++---------------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c2" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim0[1..0]  ; Input ; Info     ; Stuck at GND              ;
+; xlim0[8]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[7]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[6]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[5]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[4]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[3]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[2]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[8..5]  ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[4]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[3]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[2]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[1]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0        ; Input ; Info     ; Stuck at GND              ;
+; ylim1[6..5]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[3..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..7] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c1" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0[31..8] ; Input ; Info     ; Stuck at GND              ;
+; xlim0[7]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[6]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[5]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[4]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[3]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[2]     ; Input ; Info     ; Stuck at GND              ;
+; xlim0[1]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim0[0]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[31..9] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[5..0]  ; Input ; Info     ; Stuck at GND              ;
+; xlim1[8]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[7]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6]     ; Input ; Info     ; Stuck at VCC              ;
+; ylim0        ; Input ; Info     ; Stuck at GND              ;
+; ylim1[6..5]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[3..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..7] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "videocontroller:VC|cuadrados:c0" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; xlim0        ; Input ; Info     ; Stuck at GND              ;
+; xlim1[2..1]  ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[31..8] ; Input ; Info     ; Stuck at GND              ;
+; xlim1[6..5]  ; Input ; Info     ; Stuck at GND              ;
+; xlim1[7]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[4]     ; Input ; Info     ; Stuck at VCC              ;
+; xlim1[3]     ; Input ; Info     ; Stuck at GND              ;
+; xlim1[0]     ; Input ; Info     ; Stuck at GND              ;
+; ylim0        ; Input ; Info     ; Stuck at GND              ;
+; ylim1[6..5]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[3..1]  ; Input ; Info     ; Stuck at VCC              ;
+; ylim1[31..7] ; Input ; Info     ; Stuck at GND              ;
+; ylim1[4]     ; Input ; Info     ; Stuck at GND              ;
+; ylim1[0]     ; Input ; Info     ; Stuck at GND              ;
++--------------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_interface:D3"                                                                                                                                                                ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; numberI ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_interface:D2"                                                                                                                                                                ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; numberI ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_interface:D1"                                                                                                                                                                ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; numberI ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_interface:D0"                                                                                                                                                                ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; numberI ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "limit_checker:U1"   ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; limit[31..4] ; Input ; Info     ; Stuck at GND ;
+; limit[2..0]  ; Input ; Info     ; Stuck at GND ;
+; limit[3]     ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "game_manager:U0"                                                                     ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; check ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 464                         ;
+;     CLR               ; 6                           ;
+;     ENA               ; 4                           ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 30                          ;
+;     SCLR SLD          ; 20                          ;
+;     SLD               ; 92                          ;
+;     plain             ; 302                         ;
+; arriav_lcell_comb     ; 10313                       ;
+;     arith             ; 500                         ;
+;         1 data inputs ; 20                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 30                          ;
+;         5 data inputs ; 420                         ;
+;     extend            ; 137                         ;
+;         7 data inputs ; 137                         ;
+;     normal            ; 9676                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 883                         ;
+;         3 data inputs ; 900                         ;
+;         4 data inputs ; 1677                        ;
+;         5 data inputs ; 1554                        ;
+;         6 data inputs ; 4651                        ;
+; boundary_port         ; 77                          ;
+;                       ;                             ;
+; Max LUT depth         ; 132.90                      ;
+; Average LUT depth     ; 97.38                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:04:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun May  7 22:49:53 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off game -c game
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 6 design units, including 6 entities, in source file game.sv
+    Info (12023): Found entity 1: game File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 3
+    Info (12023): Found entity 2: loss_condition File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 279
+    Info (12023): Found entity 3: new_nums_assign File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 314
+    Info (12023): Found entity 4: limit_checker File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 340
+    Info (12023): Found entity 5: game_manager File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 376
+    Info (12023): Found entity 6: display_interface File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 579
+Info (12021): Found 1 design units, including 1 entities, in source file game_tb.sv
+    Info (12023): Found entity 1: game_tb File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divisorclock.sv
+    Info (12023): Found entity 1: divisorClock File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/divisorClock.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controladorvga.sv
+    Info (12023): Found entity 1: controladorVGA File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contadorxy.sv
+    Info (12023): Found entity 1: contadorXY File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/contadorXY.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file lineas.sv
+    Info (12023): Found entity 1: lineas File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file cuadrados.sv
+    Info (12023): Found entity 1: cuadrados File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file videocontroller.sv
+    Info (12023): Found entity 1: videocontroller File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv Line: 2
+Warning (10229): Verilog HDL Expression warning at colorSelect.sv(39): truncated literal to match 18 bits File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 39
+Warning (10229): Verilog HDL Expression warning at colorSelect.sv(40): truncated literal to match 18 bits File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 40
+Warning (10229): Verilog HDL Expression warning at colorSelect.sv(41): truncated literal to match 18 bits File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file colorselect.sv
+    Info (12023): Found entity 1: colorSelect File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file color_cuadrado.sv
+    Info (12023): Found entity 1: color_cuadrado File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/color_cuadrado.sv Line: 1
+Info (12127): Elaborating entity "game" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at game.sv(34): object "count" assigned a value but never read File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 34
+Warning (10034): Output port "d4" at game.sv(4) has no driver File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+Info (12128): Elaborating entity "game_manager" for hierarchy "game_manager:U0" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 40
+Info (12128): Elaborating entity "limit_checker" for hierarchy "limit_checker:U1" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 41
+Info (12128): Elaborating entity "loss_condition" for hierarchy "loss_condition:U2" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 42
+Info (12128): Elaborating entity "new_nums_assign" for hierarchy "new_nums_assign:U3" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 44
+Info (12128): Elaborating entity "display_interface" for hierarchy "display_interface:D0" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 46
+Info (12128): Elaborating entity "divisorClock" for hierarchy "divisorClock:DV" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 53
+Info (12128): Elaborating entity "controladorVGA" for hierarchy "controladorVGA:CNTVGA" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 57
+Info (12128): Elaborating entity "contadorXY" for hierarchy "controladorVGA:CNTVGA|contadorXY:CXY" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/controladorVGA.sv Line: 7
+Info (12128): Elaborating entity "videocontroller" for hierarchy "videocontroller:VC" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 62
+Info (12128): Elaborating entity "lineas" for hierarchy "videocontroller:VC|lineas:ln" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at lineas.sv(5): truncated value with size 32 to match size of target (1) File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/lineas.sv Line: 5
+Info (12128): Elaborating entity "cuadrados" for hierarchy "videocontroller:VC|cuadrados:c0" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at cuadrados.sv(6): truncated value with size 32 to match size of target (1) File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/cuadrados.sv Line: 6
+Info (12128): Elaborating entity "colorSelect" for hierarchy "videocontroller:VC|colorSelect:cl" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/videocontroller.sv Line: 39
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(42): variable "out_mux_0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 42
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(43): variable "out_mux_1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 43
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(44): variable "out_mux_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 44
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(45): variable "out_mux_3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 45
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(46): variable "out_mux_4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 46
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(47): variable "out_mux_5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 47
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(48): variable "out_mux_6" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 48
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(49): variable "out_mux_7" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 49
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(50): variable "out_mux_8" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 50
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(51): variable "out_mux_9" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 51
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(52): variable "out_mux_10" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 52
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(53): variable "out_mux_11" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 53
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(54): variable "out_mux_12" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 54
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(55): variable "out_mux_13" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 55
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(56): variable "out_mux_14" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 56
+Warning (10235): Verilog HDL Always Construct warning at colorSelect.sv(57): variable "out_mux_15" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 57
+Warning (10272): Verilog HDL Case Statement warning at colorSelect.sv(39): case item expression covers a value already covered by a previous case item File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 39
+Info (12128): Elaborating entity "color_cuadrado" for hierarchy "videocontroller:VC|colorSelect:cl|color_cuadrado:c0" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/colorSelect.sv Line: 7
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "derrota" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 3
+    Warning (13410): Pin "d4[0]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+    Warning (13410): Pin "d4[1]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+    Warning (13410): Pin "d4[2]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+    Warning (13410): Pin "d4[3]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+    Warning (13410): Pin "d4[4]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+    Warning (13410): Pin "d4[5]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+    Warning (13410): Pin "d4[6]" is stuck at GND File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/output_files/game.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "counter" File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 3
+Info (21057): Implemented 10397 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 69 output pins
+    Info (21061): Implemented 10320 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4904 megabytes
+    Info: Processing ended: Sun May  7 22:54:17 2023
+    Info: Elapsed time: 00:04:24
+    Info: Total CPU time (on all processors): 00:04:33
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/output_files/game.map.smsg.
+
+

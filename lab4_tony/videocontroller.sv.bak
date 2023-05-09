@@ -1,0 +1,42 @@
+module videocontroller(input logic clk_25, win, lose, input int arrayin[15:0],
+							  input logic [9:0] cuentaX,cuentaY, 
+							  output logic [7:0] r,g,b,
+							  );
+
+	
+
+	
+	logic vlineas;
+	lineas ln(cuentaX,cuentaY,vlineas);
+	
+	
+	
+	//cada cuadrados
+	logic cuadrados_enable[15:0];
+	cuadrados c0(cuentaX, cuentaY, 10, 130, 10, 100, cuadrados_enable[0]);
+	cuadrados c1(cuentaX, cuentaY, 180, 300, 10, 100, cuadrados_enable[1]);
+	cuadrados c2(cuentaX, cuentaY, 340, 460, 10, 100, cuadrados_enable[2]);
+	cuadrados c3(cuentaX, cuentaY, 500, 630, 10, 100, cuadrados_enable[3]);
+	
+	cuadrados c4(cuentaX, cuentaY, 10, 130, 140, 220, cuadrados_enable[4]);
+	cuadrados c5(cuentaX, cuentaY, 180, 300, 140, 220, cuadrados_enable[5]);
+	cuadrados c6(cuentaX, cuentaY, 340, 460, 140, 220, cuadrados_enable[6]);
+	cuadrados c7(cuentaX, cuentaY, 500, 630, 140, 220, cuadrados_enable[7]);
+	
+	cuadrados c8(cuentaX, cuentaY, 10, 130, 260, 340, cuadrados_enable[8]);
+	cuadrados c9(cuentaX, cuentaY, 180, 300, 260, 340, cuadrados_enable[9]);
+	cuadrados c10(cuentaX, cuentaY, 340, 460, 260, 340, cuadrados_enable[10]);
+	cuadrados c11(cuentaX, cuentaY, 500, 630, 260, 340, cuadrados_enable[11]);
+	
+	cuadrados c12(cuentaX, cuentaY, 10, 130, 380, 470, cuadrados_enable[12]);
+	cuadrados c13(cuentaX, cuentaY, 180, 300, 380, 470, cuadrados_enable[13]);
+	cuadrados c14(cuentaX, cuentaY, 340, 460, 380, 470, cuadrados_enable[14]);
+	cuadrados c15(cuentaX, cuentaY, 500, 630, 380, 470, cuadrados_enable[15]);
+	
+	
+	
+	
+	colorSelect cl(vlineas,selector,pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,lineawin,empateline,r,g,b);
+	
+	
+endmodule

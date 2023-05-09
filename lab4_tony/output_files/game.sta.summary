@@ -1,0 +1,389 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'state.011'
+Slack : -110.417
+TNS   : -26042.591
+
+Type  : Slow 1100mV 85C Model Setup 'state.001'
+Slack : -6.457
+TNS   : -21.271
+
+Type  : Slow 1100mV 85C Model Setup 'state.000'
+Slack : -5.801
+TNS   : -5.801
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -5.238
+TNS   : -28.165
+
+Type  : Slow 1100mV 85C Model Setup 'state.100'
+Slack : -3.859
+TNS   : -3.859
+
+Type  : Slow 1100mV 85C Model Setup 'state.010'
+Slack : -3.811
+TNS   : -540.538
+
+Type  : Slow 1100mV 85C Model Setup 'divisorClock:DV|clock_25'
+Slack : -2.972
+TNS   : -54.134
+
+Type  : Slow 1100mV 85C Model Setup 'clk_monitor'
+Slack : -0.787
+TNS   : -1.382
+
+Type  : Slow 1100mV 85C Model Hold 'state.010'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'state.011'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk_monitor'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'state.100'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'state.001'
+Slack : 0.541
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'divisorClock:DV|clock_25'
+Slack : 0.691
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'state.000'
+Slack : 0.841
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.939
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.668
+TNS   : -5.878
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'state.011'
+Slack : -0.518
+TNS   : -177.904
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'state.010'
+Slack : -0.483
+TNS   : -126.969
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_monitor'
+Slack : -0.451
+TNS   : -2.521
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'state.100'
+Slack : -0.427
+TNS   : -0.821
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisorClock:DV|clock_25'
+Slack : -0.423
+TNS   : -15.351
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'state.001'
+Slack : -0.394
+TNS   : -2.904
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'state.000'
+Slack : -0.394
+TNS   : -0.584
+
+Type  : Slow 1100mV 0C Model Setup 'state.011'
+Slack : -109.118
+TNS   : -25750.741
+
+Type  : Slow 1100mV 0C Model Setup 'state.001'
+Slack : -6.176
+TNS   : -20.740
+
+Type  : Slow 1100mV 0C Model Setup 'state.000'
+Slack : -5.526
+TNS   : -5.526
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -4.998
+TNS   : -27.156
+
+Type  : Slow 1100mV 0C Model Setup 'state.100'
+Slack : -3.732
+TNS   : -3.732
+
+Type  : Slow 1100mV 0C Model Setup 'state.010'
+Slack : -3.711
+TNS   : -524.434
+
+Type  : Slow 1100mV 0C Model Setup 'divisorClock:DV|clock_25'
+Slack : -3.013
+TNS   : -53.858
+
+Type  : Slow 1100mV 0C Model Setup 'clk_monitor'
+Slack : -0.784
+TNS   : -1.329
+
+Type  : Slow 1100mV 0C Model Hold 'state.010'
+Slack : 0.132
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'state.011'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk_monitor'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'state.100'
+Slack : 0.526
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'state.001'
+Slack : 0.527
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'divisorClock:DV|clock_25'
+Slack : 0.683
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.859
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'state.000'
+Slack : 0.871
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.669
+TNS   : -5.966
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'state.011'
+Slack : -0.476
+TNS   : -174.979
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_monitor'
+Slack : -0.463
+TNS   : -2.555
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'state.010'
+Slack : -0.457
+TNS   : -127.103
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisorClock:DV|clock_25'
+Slack : -0.428
+TNS   : -15.316
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'state.100'
+Slack : -0.406
+TNS   : -0.800
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'state.001'
+Slack : -0.394
+TNS   : -2.875
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'state.000'
+Slack : -0.394
+TNS   : -0.589
+
+Type  : Fast 1100mV 85C Model Setup 'state.011'
+Slack : -64.404
+TNS   : -15190.946
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -4.345
+TNS   : -23.048
+
+Type  : Fast 1100mV 85C Model Setup 'state.001'
+Slack : -3.836
+TNS   : -12.483
+
+Type  : Fast 1100mV 85C Model Setup 'state.000'
+Slack : -3.411
+TNS   : -3.411
+
+Type  : Fast 1100mV 85C Model Setup 'state.010'
+Slack : -2.265
+TNS   : -311.676
+
+Type  : Fast 1100mV 85C Model Setup 'state.100'
+Slack : -2.112
+TNS   : -2.112
+
+Type  : Fast 1100mV 85C Model Setup 'divisorClock:DV|clock_25'
+Slack : -1.392
+TNS   : -24.716
+
+Type  : Fast 1100mV 85C Model Setup 'clk_monitor'
+Slack : -0.196
+TNS   : -0.196
+
+Type  : Fast 1100mV 85C Model Hold 'state.010'
+Slack : -0.176
+TNS   : -1.175
+
+Type  : Fast 1100mV 85C Model Hold 'state.011'
+Slack : -0.149
+TNS   : -0.191
+
+Type  : Fast 1100mV 85C Model Hold 'state.100'
+Slack : -0.091
+TNS   : -0.091
+
+Type  : Fast 1100mV 85C Model Hold 'state.001'
+Slack : 0.019
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk_monitor'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'state.000'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'divisorClock:DV|clock_25'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.745
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.620
+TNS   : -4.333
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_monitor'
+Slack : -0.467
+TNS   : -1.745
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'state.011'
+Slack : -0.246
+TNS   : -19.067
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'state.010'
+Slack : -0.192
+TNS   : -14.839
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'state.100'
+Slack : -0.184
+TNS   : -0.184
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divisorClock:DV|clock_25'
+Slack : -0.132
+TNS   : -2.096
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'state.001'
+Slack : -0.100
+TNS   : -0.355
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'state.000'
+Slack : -0.024
+TNS   : -0.024
+
+Type  : Fast 1100mV 0C Model Setup 'state.011'
+Slack : -58.096
+TNS   : -13694.938
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -3.645
+TNS   : -19.405
+
+Type  : Fast 1100mV 0C Model Setup 'state.001'
+Slack : -3.278
+TNS   : -10.840
+
+Type  : Fast 1100mV 0C Model Setup 'state.000'
+Slack : -3.049
+TNS   : -3.049
+
+Type  : Fast 1100mV 0C Model Setup 'state.010'
+Slack : -1.957
+TNS   : -269.637
+
+Type  : Fast 1100mV 0C Model Setup 'state.100'
+Slack : -1.824
+TNS   : -1.824
+
+Type  : Fast 1100mV 0C Model Setup 'divisorClock:DV|clock_25'
+Slack : -1.206
+TNS   : -21.698
+
+Type  : Fast 1100mV 0C Model Setup 'clk_monitor'
+Slack : -0.136
+TNS   : -0.136
+
+Type  : Fast 1100mV 0C Model Hold 'state.011'
+Slack : -0.201
+TNS   : -0.314
+
+Type  : Fast 1100mV 0C Model Hold 'state.010'
+Slack : -0.184
+TNS   : -1.628
+
+Type  : Fast 1100mV 0C Model Hold 'state.100'
+Slack : -0.096
+TNS   : -0.096
+
+Type  : Fast 1100mV 0C Model Hold 'state.001'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk_monitor'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'state.000'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'divisorClock:DV|clock_25'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.596
+TNS   : -4.223
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_monitor'
+Slack : -0.464
+TNS   : -1.751
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'state.011'
+Slack : -0.159
+TNS   : -11.066
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'state.010'
+Slack : -0.129
+TNS   : -9.486
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'state.100'
+Slack : -0.113
+TNS   : -0.113
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisorClock:DV|clock_25'
+Slack : -0.098
+TNS   : -1.473
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'state.001'
+Slack : -0.063
+TNS   : -0.194
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'state.000'
+Slack : -0.009
+TNS   : -0.009
+
+------------------------------------------------------------

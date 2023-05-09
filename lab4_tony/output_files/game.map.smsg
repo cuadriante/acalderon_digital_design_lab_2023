@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at game.sv(4): object "d0" differs only in case from object "D0" in the same scope File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+Info (10281): Verilog HDL Declaration information at game.sv(4): object "d1" differs only in case from object "D1" in the same scope File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+Info (10281): Verilog HDL Declaration information at game.sv(4): object "d2" differs only in case from object "D2" in the same scope File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4
+Info (10281): Verilog HDL Declaration information at game.sv(4): object "d3" differs only in case from object "D3" in the same scope File: C:/Users/INTEL/Documents/GitHub/acalderon_digital_design_lab_2023/lab4_tony/game.sv Line: 4

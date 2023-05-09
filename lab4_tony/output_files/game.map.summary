@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sun May  7 22:54:17 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : game
+Top-level Entity Name : game
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 464
+Total pins : 77
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0
