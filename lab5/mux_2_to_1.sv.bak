@@ -1,0 +1,10 @@
+module mux_N_to_1 #(parameter N=2)(input [N-1:0] i1, i2, input logic sel, output [N-1:0] result);
+	
+	always @* begin
+    if (sel)
+      assign result = i1;
+    else
+      assign result = i2;
+  end
+
+endmodule

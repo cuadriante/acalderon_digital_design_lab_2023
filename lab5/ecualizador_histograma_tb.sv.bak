@@ -1,0 +1,58 @@
+module ecualizador_histograma_tb;
+
+  // Parameters
+  parameter DATA_WIDTH = 32;
+
+  // Inputs and outputs
+  reg [DATA_WIDTH-1:0] input_data;
+  wire [DATA_WIDTH-1:0] output_data;
+
+  reg data0, data1, sel;
+  wire out;
+
+  // Instantiate the module for adding 4
+  add_four_module add_four_inst (
+    .input_data(input_data),
+    .output_data(output_data)
+  );
+
+  // Instantiate the mux_2to1 module
+  mux_2to1 mux_inst (
+    .data0(data0),
+    .data1(data1),
+    .sel(sel),
+    .out(out)
+  );
+
+  // Testbench stimulus
+  initial begin
+    // Assign test inputs for add_four_module
+    input_data = 32'h01234567;
+    
+    // Display initial values
+    $display("Add Four Module - Input: %h, Output: %h", input_data, output_data);
+    
+    // Assign test inputs for mux_2to1
+    data0 = 1'b0;
+    data1 = 1'b1;
+    sel = 1'b0;
+    
+    // Display initial values
+    $display("MUX 2-to-1 - Input: data0=%b, data1=%b, sel=%b, Output: out=%b", data0, data1, sel, out);
+    
+    // Change inputs and display results for add_four_module
+    #5;
+    input_data = 32'hFFFFFFFF;
+    $display("Add Four Module - Input: %h, Output: %h", input_data, output_data);
+    
+    // Change inputs and display results for mux_2to1
+    #5;
+    sel = 1'b1;
+    $display("MUX 2-to-1 - Input: data0=%b, data1=%b, sel=%b, Output: out=%b", data0, data1, sel, out);
+    
+    // End simulation
+    #5;
+    $finish;
+  end
+
+endmodule
