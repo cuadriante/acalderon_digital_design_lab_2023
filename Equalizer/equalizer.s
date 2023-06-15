@@ -45,6 +45,7 @@ cmp R9, #256
 beq _accumulate_frequencies
 mov R8, #0
 mov R2, #0
+b _frequency_column
 
 _frequency_column:
 cmp R8, R7
