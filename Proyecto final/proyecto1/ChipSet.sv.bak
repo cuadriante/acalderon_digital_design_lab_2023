@@ -1,0 +1,27 @@
+module ChipSet (input logic [17:0] addr,output logic [1:0] select,output logic [15:0] out_addr);
+
+
+
+always @(*) begin
+	
+	if(addr >= 0 && addr < 17'hfff) begin
+	
+		select <= 2'b00;
+		out_addr <= addr[15:0];
+	
+	end else if(addr >= 300 && addr < 90300 ) begin
+		select <= 2'b01;
+		out_addr <= (addr-300);
+	
+	end else if( addr >= 90300)  begin
+		select <= 2'b10;
+		out_addr <= (addr-90300);
+	end
+
+
+end
+
+
+
+endmodule
+

@@ -1,0 +1,11 @@
+
+
+module videocontroller (input logic [9:0]
+							  cuentaX,cuentaY, output logic [16:0] vga_addr);
+	
+	
+	
+	
+	
+					  
+endmodule

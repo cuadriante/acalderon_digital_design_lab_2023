@@ -1,0 +1,38 @@
+
+
+module rom_TB();
+	
+	logic clk;
+	logic [15:0] address;
+	logic [7:0] q;
+	dataMemRom RM(
+	address,
+	clock,
+	q);
+
+	initial begin
+	address = 0;
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	
+	end
+endmodule

@@ -1,0 +1,30 @@
+
+module ConditionLogic(input logic [3:0] cond, aluFlags, input logic [1:0] flagW, 
+						input logic pcs, regW, memW, clk, output logic pcSrc, regWrite, memWrite);
+
+	logic condEx;
+	logic[3:2] aluFlagsAux;
+	logic[1:0] flagWrite 
+	
+	ConditionCheck H0(cond, aluFlagsAux[3:2], aluFlagsAux[1:0], condEx);
+	
+	
+	always @ (negedge clk or posedge flagWrite[1]) begin
+		
+		aluFlagsAux = aluFlags[3:2];
+		
+	end
+	
+	always @ (negedge clk or posedge flagWrite[0]) begin
+		
+		aluFlagsAux = aluFlags[1:0];
+		
+	end
+	
+	
+	assign pcSrc = condEx & pcs;
+	assign regWrite = condEx & regW;
+	assign memWrite = condEx & memW;
+	assign flagWrite = {condEx & flagW[1], condEx & flagW[0]};
+
+endmodule

@@ -1,0 +1,19 @@
+
+module Decoder(input logic [1:0] op, input logic [5:0] funct, input logic [3:0] Rd, 
+					output logic [1:0] flagW, immSrc, regSrc, aluControl, input logic pcs, regW, memW, memtoReg,
+					aluSrc);
+	
+	logic branch, memtoReg, memW, aluSrc, regW, aluOp;
+	logic [1:0] immSrc,  regSrc;
+	logic pcs
+	
+	MainDecoder M0(op, func[5], func[0], 
+					branch, memtoReg, memW, aluSrc, regW, aluOp,
+					immSrc,  regSrc);
+	
+	PCLogic L0(Rd, branch, regW, pcs);
+	AluDecoder A0(aluOp, func[0], func[4:1], aluControl, flagW);
+	
+
+
+endmodule

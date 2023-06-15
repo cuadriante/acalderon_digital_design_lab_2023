@@ -1,0 +1,45 @@
+
+`timescale 1 ps / 1 ps
+module ram_TB();
+	
+	logic clk;
+	logic [15:0] address;
+	logic [7:0] q;
+	dataMemRAM (
+	address_a,
+	address_b,
+	clock_a,
+	clock_b,
+	data_a,
+	data_b,
+	wren_a,
+	wren_b,
+	q_a,
+	q_b);
+
+	initial begin
+	address = 0;
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	#40
+	clk = 1;
+	#40
+	clk = 0;
+	
+	end
+endmodule

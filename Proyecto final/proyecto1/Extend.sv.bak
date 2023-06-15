@@ -1,0 +1,24 @@
+
+module Extend(input logic [23:0] immediate, input logic [1:0] immSrc, output logic [31:0] extImm);
+
+	always_comb begin
+	
+		case (immSrc) begin
+		
+			2'b00:
+				extImm[31:8] = 24'd0;
+				extImm[7:0] = immediate[7:0];
+			2b'01:
+				extImm[31:12] = 20'd0;
+				extImm[11:0] = immediate[11:0];
+			2b'10:
+				extImm[31:24] = 8'd0;
+				extImm[23:0] = immediate[23:0];
+			default:
+				extImm[31:8] = 24'd0;
+				extImm[7:0] = immediate[7:0];
+		endcase
+	
+	end
+
+endmodule

@@ -1,0 +1,1125 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/simulation/modelsim
+valu
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1686825459
+!i10b 1
+!s100 J0h>Z;V<mcN32?982DZ4B1
+INaz18@M8_[keRB9NgTKmz1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 alu_sv_unit
+S1
+R0
+w1686643449
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/alu.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/alu.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1686825459.000000
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/alu.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1
+Z8 tCvgOpt 0
+vAluDecoder
+R1
+Z9 !s110 1686825458
+!i10b 1
+!s100 [BFHC8[h17JfQ=Le1`WZN3
+IKkH=O;izban;Mm1839Lhj1
+R3
+!s105 AluDecoder_sv_unit
+S1
+R0
+w1686788019
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/AluDecoder.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/AluDecoder.sv
+L0 2
+R4
+r1
+!s85 0
+31
+Z10 !s108 1686825458.000000
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/AluDecoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/AluDecoder.sv|
+!i113 1
+R6
+R7
+R8
+n@alu@decoder
+vand_gate
+R1
+R2
+!i10b 1
+!s100 HMal[KYQC17Yc0loB:dZ32
+Ien1em^^3PU9Wg?P5Zj_z^2
+R3
+Z11 !s105 logic_alu_sv_unit
+S1
+R0
+Z12 w1684836421
+Z13 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/logic_alu.sv
+Z14 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/logic_alu.sv
+L0 12
+R4
+r1
+!s85 0
+31
+R5
+Z15 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/logic_alu.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/logic_alu.sv|
+!i113 1
+R6
+R7
+R8
+varith_alu
+R1
+R2
+!i10b 1
+!s100 M_?Y63HeJK6TE34B6CQ=m2
+IhnE7N[HnezjnPFON=QchK3
+R3
+Z17 !s105 arith_alu_sv_unit
+S1
+R0
+Z18 w1686619304
+Z19 8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/arith_alu.sv
+Z20 FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/arith_alu.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+Z21 !s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/arith_alu.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/arith_alu.sv|
+!i113 1
+R6
+R7
+R8
+vbit_compare
+R1
+R2
+!i10b 1
+!s100 gm2]V]oWXE]1XO64I`6732
+IdDhc636;g;O3]@R]@^AB`3
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 190
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vChipSet
+R1
+R2
+!i10b 1
+!s100 L_emam?bhEaYSk`;P>CRI1
+IhkRKee=7KFGAYHMD86;4N3
+R3
+!s105 ChipSet_sv_unit
+S1
+R0
+w1686626890
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ChipSet.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ChipSet.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ChipSet.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ChipSet.sv|
+!i113 1
+R6
+R7
+R8
+n@chip@set
+vConditionCheck
+R1
+R9
+!i10b 1
+!s100 l84b1TL`:LWk3_5hlEiQZ0
+IdLUJKBFW6=R=VZJE[R?gh0
+R3
+!s105 ConditionCheck_sv_unit
+S1
+R0
+w1686802972
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionCheck.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionCheck.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionCheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionCheck.sv|
+!i113 1
+R6
+R7
+R8
+n@condition@check
+vConditionLogic
+R1
+R9
+!i10b 1
+!s100 FN91DR1^eZ]?l3cVQbQ9j0
+I7D8fC3?z2[UH_<PUGRAno1
+R3
+!s105 ConditionLogic_sv_unit
+S1
+R0
+w1686788693
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionLogic.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionLogic.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionLogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ConditionLogic.sv|
+!i113 1
+R6
+R7
+R8
+n@condition@logic
+vcontadorXY
+R1
+R2
+!i10b 1
+!s100 eDdShdo6[<3A^Q=PdW55e3
+IXgjdC=:fZ4[8=]S`[WbbG1
+R3
+!s105 contadorXY_sv_unit
+S1
+R0
+w1686616938
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/contadorXY.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/contadorXY.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/contadorXY.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/contadorXY.sv|
+!i113 1
+R6
+R7
+R8
+ncontador@x@y
+vcontroladorVGA
+R1
+R2
+!i10b 1
+!s100 FfIgD4PCE2IPh[W`Tmhi41
+Ii7MRz61g25Gl595J7nW802
+R3
+!s105 controladorVGA_sv_unit
+S1
+R0
+w1686540830
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/controladorVGA.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/controladorVGA.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/controladorVGA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/controladorVGA.sv|
+!i113 1
+R6
+R7
+R8
+ncontrolador@v@g@a
+vControlUnit
+R1
+R9
+!i10b 1
+!s100 ;n=3h?3j=:2lIm0]kk<cM2
+I@lj]La5KNEIF^YGVY[4Dc1
+R3
+!s105 ControlUnit_sv_unit
+S1
+R0
+w1684888228
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ControlUnit.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ControlUnit.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ControlUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/ControlUnit.sv|
+!i113 1
+R6
+R7
+R8
+n@control@unit
+vcpu
+R1
+R2
+!i10b 1
+!s100 U56HiSn=BT[Kn`b=fnMf<0
+IWfYTnISPNZ>o:YcLiF4:<2
+R3
+!s105 cpu_sv_unit
+S1
+R0
+w1686651166
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/cpu.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/cpu.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/cpu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/cpu.sv|
+!i113 1
+R6
+R7
+R8
+vDecoder
+R1
+R9
+!i10b 1
+!s100 I_I_cN1f0Z19OFAOzzA_d3
+IB7mQ3>aY6b5:k3YI:D6RT2
+R3
+!s105 Decoder_sv_unit
+S1
+R0
+w1686635528
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Decoder.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Decoder.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Decoder.sv|
+!i113 1
+R6
+R7
+R8
+n@decoder
+vdivisorClock
+R1
+R2
+!i10b 1
+!s100 lDZ8h2Xb8CE]Q^Pc9=9ja2
+IehR92IL3ET4kcBkI`;PRl3
+R3
+!s105 divisorClock_sv_unit
+S1
+R0
+w1686540789
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/divisorClock.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/divisorClock.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/divisorClock.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/divisorClock.sv|
+!i113 1
+R6
+R7
+R8
+ndivisor@clock
+vExtend
+R1
+R9
+!i10b 1
+!s100 gMS;aL@MKSVUTkJ2J>VI_0
+I[?l4E>`SI<SH6I_OFK>j`3
+R3
+!s105 Extend_sv_unit
+S1
+R0
+w1684834496
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Extend.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Extend.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/Extend.sv|
+!i113 1
+R6
+R7
+R8
+n@extend
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 Zb3:Y>1T16L:6?TPjiUQT3
+I_7A2b;BKDcMRkF7RL9GXX2
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 164
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vInstructionMemory
+R1
+R2
+!i10b 1
+!s100 gaC6BO0UhDkTW?Em_W;AU0
+IED::og:NCamRkgRF^c5Ef0
+R3
+!s105 InstructionMemory_sv_unit
+S1
+R0
+w1686729841
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/InstructionMemory.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/InstructionMemory.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/InstructionMemory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/InstructionMemory.sv|
+!i113 1
+R6
+R7
+R8
+n@instruction@memory
+vlogic_alu
+R1
+R2
+!i10b 1
+!s100 ncjiCgHU7ReGQP0SK9[b]1
+IGgJ4KNA72]@XJSFb[NjF51
+R3
+R11
+S1
+R0
+R12
+R13
+R14
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vMainDecoder
+R1
+R9
+!i10b 1
+!s100 CloI300^Jj2QS5Kf`icN92
+I8PF>cTT4e2GT^6^Jm4G2B0
+R3
+!s105 MainDecoder_sv_unit
+S1
+R0
+w1686804273
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/MainDecoder.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/MainDecoder.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/MainDecoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/MainDecoder.sv|
+!i113 1
+R6
+R7
+R8
+n@main@decoder
+vmux_2_to_1_32
+R1
+R9
+!i10b 1
+!s100 Aa_3_FJ=6ZHEY6di?Lk_U1
+IG0FMnmT>YAAgeOVGLdfYX0
+R3
+!s105 mux_2_to_1_32_sv_unit
+S1
+R0
+w1686621216
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_32.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_32.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_32.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_32.sv|
+!i113 1
+R6
+R7
+R8
+vmux_2_to_1_4
+R1
+R9
+!i10b 1
+!s100 cIC9TQ=i>48o9GBRV1g]40
+Ie;O8Nkgkf;4PAzRICjEoH0
+R3
+!s105 mux_2_to_1_4_sv_unit
+S1
+R0
+w1686621221
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_4.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_4.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_2_to_1_4.sv|
+!i113 1
+R6
+R7
+R8
+vmux_3_to_1_32
+R1
+R2
+!i10b 1
+!s100 XCQfg>TjF`[e7]MLj<8H61
+IM3>T5<U39c0R<HeoDnXV_1
+R3
+!s105 mux_3_to_1_32_sv_unit
+S1
+R0
+w1686621225
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_3_to_1_32.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_3_to_1_32.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_3_to_1_32.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/mux_3_to_1_32.sv|
+!i113 1
+R6
+R7
+R8
+vn_bit_adder
+R1
+R2
+!i10b 1
+!s100 gVRa5T9zUOgi<B=A?f_L>3
+Iln[4:i^IJM2>H?7jQafcT0
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 127
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vn_bit_adder_sub
+R1
+R2
+!i10b 1
+!s100 c:YC=NZj]Sj_]4a1`hf<o2
+I6mjVd;nZ6W<_DW@C`XLWk0
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 138
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vn_bit_compare
+R1
+R2
+!i10b 1
+!s100 >;EIlYhc8XmJNEPnc>KJF1
+I3>F5IbcGiB4TJm72TA5?72
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 173
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vn_bit_substractor
+R1
+R2
+!i10b 1
+!s100 1:FUCOWZNUBA20_;PdlTL3
+IS]bMN66N`PfTiU5^9z]Y63
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 91
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vnot_gate
+R1
+R2
+!i10b 1
+!s100 fJYo]E]h<THVQE>KNY0U]2
+IU@>nM?W4_]3G@f97knEm]0
+R3
+R11
+S1
+R0
+R12
+R13
+R14
+L0 42
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vor_gate
+R1
+R2
+!i10b 1
+!s100 G@eM9JALIJOZ6gJK73Yz11
+I>ZfAe9TX^_fTKzfGF^KLX0
+R3
+R11
+S1
+R0
+R12
+R13
+R14
+L0 24
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vPCLogic
+R1
+R9
+!i10b 1
+!s100 N3zWgn<oeK_<HT4SNGLo11
+Ic[41K1;^H5^nGcP1YO8GE0
+R3
+!s105 PCLogic_sv_unit
+S1
+R0
+w1684647702
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/PCLogic.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/PCLogic.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/PCLogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/PCLogic.sv|
+!i113 1
+R6
+R7
+R8
+n@p@c@logic
+vpcRegister
+R1
+R2
+!i10b 1
+!s100 GT[GlOnT_ojPJh]3anI963
+IkR4OUz_EaEUcBcSznG<fd2
+R3
+!s105 pcRegister_sv_unit
+S1
+R0
+w1686729358
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/pcRegister.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/pcRegister.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/pcRegister.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/pcRegister.sv|
+!i113 1
+R6
+R7
+R8
+npc@register
+vplus_n
+R1
+R9
+!i10b 1
+!s100 oz=<1]FXjFz3O9V6BY<Ug2
+I^2<ciDhNj3RDnl2VGkoCb3
+R3
+!s105 plus_n_sv_unit
+S1
+R0
+w1684835206
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/plus_n.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/plus_n.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/plus_n.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/plus_n.sv|
+!i113 1
+R6
+R7
+R8
+vprocesador
+R1
+R2
+!i10b 1
+!s100 NhNFh5NUS=lN9LSb3c>:`0
+I1FLhJ0IJU`94OW@]OI;na0
+R3
+!s105 procesador_sv_unit
+S1
+R0
+w1686729813
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesador.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesador.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesador.sv|
+!i113 1
+R6
+R7
+R8
+vprocesadorArm
+R1
+R2
+!i10b 1
+!s100 L;7E58a6Rc^HZ71]S1TzL2
+I7^XhnE86CXT[JQ9331cJ32
+R3
+!s105 procesadorArm_sv_unit
+S1
+R0
+w1686615484
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesadorArm.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesadorArm.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesadorArm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/procesadorArm.sv|
+!i113 1
+R6
+R7
+R8
+nprocesador@arm
+vprogram_tb
+R1
+Z23 !s110 1686825460
+!i10b 1
+!s100 TP<kEzOLoOQRlF8@`mP;11
+IPUEN=BD=2_dnGODl0TD@63
+R3
+!s105 program_tb_sv_unit
+S1
+R0
+w1686816948
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/program_tb.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/program_tb.sv
+L0 2
+R4
+r1
+!s85 0
+31
+Z24 !s108 1686825460.000000
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/program_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/program_tb.sv|
+!i113 1
+R6
+R7
+R8
+vRamDataMem
+R23
+!i10b 1
+!s100 U>1WkeT1EnW>MWW2SK]ee1
+ITQ?f]C1aOH4=:cPD<lK320
+R3
+R0
+w1686703452
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RamDataMem.v
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RamDataMem.v
+Z25 L0 40
+R4
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RamDataMem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RamDataMem.v|
+!i113 1
+Z26 o-vlog01compat -work work
+Z27 !s92 -vlog01compat -work work +incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1
+R8
+n@ram@data@mem
+vRegisterFile
+R1
+R9
+!i10b 1
+!s100 L_LM]W;SG>Nh40G:QG^]U2
+I^hbFb8=YIcGjHhnL?kN1:2
+R3
+!s105 RegisterFile_sv_unit
+S1
+R0
+w1686824904
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RegisterFile.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RegisterFile.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RegisterFile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RegisterFile.sv|
+!i113 1
+R6
+R7
+R8
+n@register@file
+vresultado
+R1
+R2
+!i10b 1
+!s100 lXNV`LN:eiBcTSIkGSSHo1
+Ik3Vo>2[:JMKI4zLadzhH21
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 59
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vRomDataMem
+R23
+!i10b 1
+!s100 FYC0cjidFAXziAd82WZoG3
+IWOQDTSZ_QP^=3UZ]4g`bd3
+R3
+R0
+w1686704748
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RomDataMem.v
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RomDataMem.v
+R25
+R4
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RomDataMem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/RomDataMem.v|
+!i113 1
+R26
+R27
+R8
+n@rom@data@mem
+vshift_a
+R1
+R2
+!i10b 1
+!s100 oJN`U]KP45^k3IfeRU3]h1
+I6<7nWTW8B?zNXZH2RUm]T3
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 214
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vshiftL_gate
+R1
+R2
+!i10b 1
+!s100 Ig94oA7iLkh]1m;Nc=@NI2
+IJ77QT@o`7djh_ee:7GZiK3
+R3
+R11
+S1
+R0
+R12
+R13
+R14
+L0 61
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+nshift@l_gate
+vshiftR_arith
+R1
+R2
+!i10b 1
+!s100 bR`iZ7303m?B<WQ4H^nAZ0
+I67RN]`Q^Fc9CQX[J3zia90
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 201
+R4
+r1
+!s85 0
+31
+R5
+R21
+R22
+!i113 1
+R6
+R7
+R8
+nshift@r_arith
+vshiftR_gate
+R1
+R2
+!i10b 1
+!s100 <nOmbQI;Ji5bAE=CLK1oh1
+IEHA2T7BMC>UKU?HYhIcS=3
+R3
+R11
+S1
+R0
+R12
+R13
+R14
+L0 51
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+nshift@r_gate
+vvideocontroller
+R1
+R2
+!i10b 1
+!s100 n[[b7FmaFK8:0;LJ1OiIJ3
+IGJ>kT5l:Ib1Z[kIeCGLFQ3
+R3
+!s105 videocontroller_sv_unit
+S1
+R0
+w1686615690
+8C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/videocontroller.sv
+FC:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/videocontroller.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/videocontroller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1|C:/Users/INTEL/Desktop/VarasDeLaU/PrimerSem12023/proyecto1/videocontroller.sv|
+!i113 1
+R6
+R7
+R8
+vxor_gate
+R1
+R2
+!i10b 1
+!s100 Ae<lETXW78i?CzJ38DVaH1
+IdddaL5=_N9d_o9`RaW:JP0
+R3
+R11
+S1
+R0
+R12
+R13
+R14
+L0 33
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8

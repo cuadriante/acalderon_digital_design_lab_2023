@@ -1,0 +1,11 @@
+
+module pcRegister(input logic clk, input logic [32:0] pcin, output logic [32:0] pcout);
+
+	
+	always @ (negedge clk) begin
+		
+		pcout = pcin;
+	
+	end
+
+endmodule
