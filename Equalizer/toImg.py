@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-linkImg = "Lenna.png"
-linkRemapeo = "remappedFile.txt"
-linkFinal = "final.txt"
+image_path = "Lenna.png"
+transform_path = "remappedFile.txt"
+Final_path = "final.txt"
 
 def build():
-    with open(linkRemapeo, "r") as txt1, open(linkFinal, "w+") as txt2:
+    with open(transform_path, "r") as txt1, open(Final_path, "w+") as txt2:
         for element in txt1:
             value = element.rstrip("\n")
             pixel = sum(int(value[i]) << (7 - i) for i in range(8))
@@ -17,9 +17,9 @@ def build():
 
 
 def create_image():
-    with open(linkFinal, "r") as f:
+    with open(Final_path, "r") as f:
         newMat = []
-        img_color = cv2.imread(linkImg)
+        img_color = cv2.imread(image_path)
         vertical, horizontal, _ = img_color.shape
         for _ in range(vertical):
             row = [int(f.readline().rstrip("\n")) for _ in range(horizontal)]
@@ -32,7 +32,7 @@ def create_image():
 
 
 def histograms():
-    img = cv2.imread(linkImg, 0)
+    img = cv2.imread(image_path, 0)
     imgeq = cv2.imread("equalized.png")
     cv2.imshow("test",img)
     cv2.imshow("test",imgeq)

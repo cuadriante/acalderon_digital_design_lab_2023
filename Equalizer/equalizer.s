@@ -7,7 +7,7 @@ mov R1, #2
 mov R7, #5
 swi 0
 add R8, R0, #0
-ldr R9, =262144
+ldr R9, =65025
 b _loadROM
 
 _loadROM:
@@ -36,7 +36,7 @@ b _loadPixels
 
 _frequencies:
 mov R9, #0
-ldr R7, =262144 @ total pixels to analyze
+ldr R7, =65025 @ total pixels to analyze
 ldr R4, =frequency_table1
 b _frequency_row
 
@@ -45,6 +45,7 @@ cmp R9, #256
 beq _accumulate_frequencies
 mov R8, #0
 mov R2, #0
+b _frequency_column
 
 _frequency_column:
 cmp R8, R7
@@ -85,7 +86,7 @@ b _accumulate_frequencies_aux
 
 _frequency_distribution:
 mov R9, #0
-ldr R1, =1028
+ldr R1, =255
 ldr R2, =frequency_table3
 ldr R3, =frequency_accumulator2
 mov R4, #0
@@ -113,7 +114,7 @@ mov R1, #2
 mov R7, #5
 swi 0
 add R6, R0, #0
-ldr R9, =262144
+ldr R9, =65025
 mov R3, #0
 b _loadToFinalAux
 
@@ -171,7 +172,7 @@ b _initialMappingColumn
 
 _findSmallest:
 ldr R7, =differenceList
-ldr R4, =262144
+ldr R4, =65025
 mov R8, #0
 mov R11, #0
 b _findSmallestAux
@@ -195,7 +196,7 @@ b _initialMappingRow
 
 _remapFinal:
 ldr R0, =ROMMem
-ldr R1, =262144
+ldr R1, =65025
 b _remapFinalAux
 
 _remapFinalAux:
@@ -307,9 +308,9 @@ frequency_table1: .space 1020, 0
 frequency_accumulator: .space 1020, 0
 frequency_table3: .space 1020, 0
 frequency_accumulator2: .space 1020, 0
-total: .4byte 262144
+total: .4byte 65025
 byteMapping: .space 255, 0
 maxPixelValue: .byte 255
 auxiliary: .asciz "00000000"
 converter: .asciz "000"
-ROMMem: .space 262144, 0
+ROMMem: .space 65025, 0
